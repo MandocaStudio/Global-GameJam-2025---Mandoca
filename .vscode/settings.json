@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Global GameJam 2025 - Mandoca.sln"
+    "dotnet.defaultSolution": "Global-GameJam-2025---Mandoca.sln"
 }
