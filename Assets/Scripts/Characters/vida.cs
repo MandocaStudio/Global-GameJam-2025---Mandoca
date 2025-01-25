@@ -10,11 +10,15 @@ public class Vida : MonoBehaviour
 
     [SerializeField] private GameObject bubbleVFX;
 
+    [SerializeField] private MeshRenderer bubbleMeshRenderer;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         objectRenderer = GetComponent<Renderer>();
+
+        bubbleMeshRenderer = GetComponent<MeshRenderer>();
 
         if (cantidad_vida == 3)
         {
@@ -30,6 +34,10 @@ public class Vida : MonoBehaviour
         }
 
         bubbleVFX = transform.GetChild(0).gameObject;
+
+        bubbleVFX.SetActive(false);
+
+
     }
 
     // Update is called once per frame
@@ -72,7 +80,14 @@ public class Vida : MonoBehaviour
         await UniTask.Delay(500);
         Player.speed = 0;
         bubbleVFX.SetActive(true);
+
+        bubbleMeshRenderer.enabled = false;
+
+        await UniTask.Delay(1000);
+
+        Player.allowFall();
         Destroy(gameObject);
+
 
 
     }

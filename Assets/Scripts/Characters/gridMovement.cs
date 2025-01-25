@@ -2,6 +2,7 @@ using System.Threading.Tasks;
 using Cysharp.Threading.Tasks;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class gridMovement : MonoBehaviour
@@ -25,10 +26,15 @@ public class gridMovement : MonoBehaviour
 
     [SerializeField] private Transform playerTransform;
 
+    [SerializeField] private Rigidbody rbPlayer;
+
+    [SerializeField] private int sceneIndex;
+
 
 
     void Start()
     {
+        rbPlayer = GetComponent<Rigidbody>();
         movePoint = transform.position;
     }
 
@@ -62,6 +68,24 @@ public class gridMovement : MonoBehaviour
         }
 
     }
+
+    public async UniTask allowFall()
+    {
+        rbPlayer.constraints = RigidbodyConstraints.FreezePositionX
+                               | RigidbodyConstraints.FreezePositionZ
+                               | RigidbodyConstraints.FreezeRotationX
+                               | RigidbodyConstraints.FreezeRotationY
+                               | RigidbodyConstraints.FreezeRotationZ;
+
+        rbPlayer.useGravity = true;
+
+        await UniTask.Delay(1000);
+
+        SceneManager.LoadScene(sceneIndex);
+
+
+    }
+
 
     private void rotatePlayer()
     {
