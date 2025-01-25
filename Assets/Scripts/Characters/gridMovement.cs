@@ -1,3 +1,4 @@
+using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using Cysharp.Threading.Tasks;
 using Unity.Mathematics;
@@ -19,7 +20,8 @@ public class gridMovement : MonoBehaviour
 
     [SerializeField] private Vector3 input;
 
-    [SerializeField] private bool canMove;
+    [SerializeField] private bool canMove, canUseMovement;
+
 
     [SerializeField] private Vector3 cubeRadius;
 
@@ -30,6 +32,7 @@ public class gridMovement : MonoBehaviour
 
     [SerializeField] private int sceneIndex;
 
+    private Vector3 previousInput; // Para almacenar la entrada previa del jugador
 
 
     void Start()
@@ -39,10 +42,10 @@ public class gridMovement : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    async Task Update()
     {
-        input.z = Input.GetAxisRaw("Vertical");
-        input.x = Input.GetAxisRaw("Horizontal");
+        input.z = (int)Input.GetAxisRaw("DPadVertical");
+        input.x = (int)Input.GetAxisRaw("DPadHorizontal");
 
 
         if (canMove)
@@ -53,21 +56,30 @@ public class gridMovement : MonoBehaviour
             {
                 canMove = false;
 
+                canUseMovement = false;
             }
         }
 
 
 
-        if ((input.x == 1 ^ input.z == 1 ^ input.x == -1 ^ input.z == -1) && !canMove)
+        if ((input.x != 0 ^ input.z != 0) && !canMove && canUseMovement)
         {
-
-
             rotatePlayer();
             canMove = true;
+
             movePoint += input;
+
+            previousInput = input;
         }
 
+
+        if (input == Vector3.zero)
+        {
+            canUseMovement = true;
+            previousInput = Vector3.zero;
+        }
     }
+
 
     public async UniTask allowFall()
     {

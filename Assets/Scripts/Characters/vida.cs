@@ -85,7 +85,7 @@ public class Vida : MonoBehaviour
 
         await UniTask.Delay(1000);
 
-        Player.allowFall();
+        await Player.allowFall();
         Destroy(gameObject);
 
 

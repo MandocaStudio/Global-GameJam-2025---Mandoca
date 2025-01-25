@@ -129,15 +129,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 154f8203e7d4e3842bcd625587b71bc6, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.3
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 154f8203e7d4e3842bcd625587b71bc6, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.3
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 154f8203e7d4e3842bcd625587b71bc6, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.3
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 154f8203e7d4e3842bcd625587b71bc6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -251,9 +251,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cantidad_vida: 3
   objectRenderer: {fileID: 0}
-  color1: {fileID: 2100000, guid: 210e3424bab939946921aca2a0fc83d5, type: 2}
-  color2: {fileID: 2100000, guid: d48e189fd0d15ce448497c97b6360d4c, type: 2}
-  color3: {fileID: 2100000, guid: 294465667d65f504eb63baf2d4ff01da, type: 2}
+  color1: {fileID: 2100000, guid: 453e1d30d8206b744a644b4dd90c3e00, type: 2}
+  color2: {fileID: 2100000, guid: 47be791c528be904598e4b47484039b0, type: 2}
+  color3: {fileID: 2100000, guid: 8993b7bd479d0254f841675653dd4fcd, type: 2}
   bubbleVFX: {fileID: 0}
   bubbleMeshRenderer: {fileID: 0}
 --- !u!65 &12455278
@@ -390,9 +390,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cantidad_vida: 3
   objectRenderer: {fileID: 1835359605}
-  color1: {fileID: 2100000, guid: 210e3424bab939946921aca2a0fc83d5, type: 2}
-  color2: {fileID: 2100000, guid: d48e189fd0d15ce448497c97b6360d4c, type: 2}
-  color3: {fileID: 2100000, guid: 294465667d65f504eb63baf2d4ff01da, type: 2}
+  color1: {fileID: 2100000, guid: 453e1d30d8206b744a644b4dd90c3e00, type: 2}
+  color2: {fileID: 2100000, guid: 47be791c528be904598e4b47484039b0, type: 2}
+  color3: {fileID: 2100000, guid: 8993b7bd479d0254f841675653dd4fcd, type: 2}
   bubbleVFX: {fileID: 0}
   bubbleMeshRenderer: {fileID: 0}
 --- !u!65 &71364059
@@ -478,12 +478,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 1065884509}
     m_Modifications:
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.118
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.z
@@ -520,6 +532,10 @@ PrefabInstance:
     - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_Name
       value: Jhonmar - Bubble VFX 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -540,12 +556,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 1567584844}
     m_Modifications:
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.118
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.z
@@ -582,6 +610,10 @@ PrefabInstance:
     - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_Name
       value: Jhonmar - Bubble VFX 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -602,12 +634,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 272634787}
     m_Modifications:
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.118
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.z
@@ -644,6 +688,10 @@ PrefabInstance:
     - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_Name
       value: Jhonmar - Bubble VFX 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -669,12 +717,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 353736513}
     m_Modifications:
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.118
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.z
@@ -711,6 +771,10 @@ PrefabInstance:
     - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_Name
       value: Jhonmar - Bubble VFX 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -767,9 +831,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cantidad_vida: 3
   objectRenderer: {fileID: 0}
-  color1: {fileID: 2100000, guid: 210e3424bab939946921aca2a0fc83d5, type: 2}
-  color2: {fileID: 2100000, guid: d48e189fd0d15ce448497c97b6360d4c, type: 2}
-  color3: {fileID: 2100000, guid: 294465667d65f504eb63baf2d4ff01da, type: 2}
+  color1: {fileID: 2100000, guid: 453e1d30d8206b744a644b4dd90c3e00, type: 2}
+  color2: {fileID: 2100000, guid: 47be791c528be904598e4b47484039b0, type: 2}
+  color3: {fileID: 2100000, guid: 8993b7bd479d0254f841675653dd4fcd, type: 2}
   bubbleVFX: {fileID: 0}
   bubbleMeshRenderer: {fileID: 0}
 --- !u!65 &176474247
@@ -896,9 +960,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cantidad_vida: 3
   objectRenderer: {fileID: 0}
-  color1: {fileID: 2100000, guid: 210e3424bab939946921aca2a0fc83d5, type: 2}
-  color2: {fileID: 2100000, guid: d48e189fd0d15ce448497c97b6360d4c, type: 2}
-  color3: {fileID: 2100000, guid: 294465667d65f504eb63baf2d4ff01da, type: 2}
+  color1: {fileID: 2100000, guid: 453e1d30d8206b744a644b4dd90c3e00, type: 2}
+  color2: {fileID: 2100000, guid: 47be791c528be904598e4b47484039b0, type: 2}
+  color3: {fileID: 2100000, guid: 8993b7bd479d0254f841675653dd4fcd, type: 2}
   bubbleVFX: {fileID: 0}
   bubbleMeshRenderer: {fileID: 0}
 --- !u!65 &193242592
@@ -984,12 +1048,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 1405566954}
     m_Modifications:
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.118
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1026,6 +1102,10 @@ PrefabInstance:
     - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_Name
       value: Jhonmar - Bubble VFX 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1082,9 +1162,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cantidad_vida: 3
   objectRenderer: {fileID: 0}
-  color1: {fileID: 2100000, guid: 210e3424bab939946921aca2a0fc83d5, type: 2}
-  color2: {fileID: 2100000, guid: d48e189fd0d15ce448497c97b6360d4c, type: 2}
-  color3: {fileID: 2100000, guid: 294465667d65f504eb63baf2d4ff01da, type: 2}
+  color1: {fileID: 2100000, guid: 453e1d30d8206b744a644b4dd90c3e00, type: 2}
+  color2: {fileID: 2100000, guid: 47be791c528be904598e4b47484039b0, type: 2}
+  color3: {fileID: 2100000, guid: 8993b7bd479d0254f841675653dd4fcd, type: 2}
   bubbleVFX: {fileID: 0}
   bubbleMeshRenderer: {fileID: 0}
 --- !u!65 &208979418
@@ -1211,9 +1291,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cantidad_vida: 3
   objectRenderer: {fileID: 0}
-  color1: {fileID: 2100000, guid: 210e3424bab939946921aca2a0fc83d5, type: 2}
-  color2: {fileID: 2100000, guid: d48e189fd0d15ce448497c97b6360d4c, type: 2}
-  color3: {fileID: 2100000, guid: 294465667d65f504eb63baf2d4ff01da, type: 2}
+  color1: {fileID: 2100000, guid: 453e1d30d8206b744a644b4dd90c3e00, type: 2}
+  color2: {fileID: 2100000, guid: 47be791c528be904598e4b47484039b0, type: 2}
+  color3: {fileID: 2100000, guid: 8993b7bd479d0254f841675653dd4fcd, type: 2}
   bubbleVFX: {fileID: 0}
   bubbleMeshRenderer: {fileID: 0}
 --- !u!65 &215052106
@@ -1299,12 +1379,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 809824423}
     m_Modifications:
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.118
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1342,6 +1434,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jhonmar - Bubble VFX 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1356,12 +1452,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 1845149798}
     m_Modifications:
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.118
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1398,6 +1506,10 @@ PrefabInstance:
     - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_Name
       value: Jhonmar - Bubble VFX 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1454,9 +1566,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cantidad_vida: 3
   objectRenderer: {fileID: 0}
-  color1: {fileID: 2100000, guid: 210e3424bab939946921aca2a0fc83d5, type: 2}
-  color2: {fileID: 2100000, guid: d48e189fd0d15ce448497c97b6360d4c, type: 2}
-  color3: {fileID: 2100000, guid: 294465667d65f504eb63baf2d4ff01da, type: 2}
+  color1: {fileID: 2100000, guid: 453e1d30d8206b744a644b4dd90c3e00, type: 2}
+  color2: {fileID: 2100000, guid: 47be791c528be904598e4b47484039b0, type: 2}
+  color3: {fileID: 2100000, guid: 8993b7bd479d0254f841675653dd4fcd, type: 2}
   bubbleVFX: {fileID: 0}
   bubbleMeshRenderer: {fileID: 0}
 --- !u!65 &261959058
@@ -1588,9 +1700,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cantidad_vida: 3
   objectRenderer: {fileID: 0}
-  color1: {fileID: 2100000, guid: 210e3424bab939946921aca2a0fc83d5, type: 2}
-  color2: {fileID: 2100000, guid: d48e189fd0d15ce448497c97b6360d4c, type: 2}
-  color3: {fileID: 2100000, guid: 294465667d65f504eb63baf2d4ff01da, type: 2}
+  color1: {fileID: 2100000, guid: 453e1d30d8206b744a644b4dd90c3e00, type: 2}
+  color2: {fileID: 2100000, guid: 47be791c528be904598e4b47484039b0, type: 2}
+  color3: {fileID: 2100000, guid: 8993b7bd479d0254f841675653dd4fcd, type: 2}
   bubbleVFX: {fileID: 0}
   bubbleMeshRenderer: {fileID: 0}
 --- !u!65 &272634789
@@ -1676,12 +1788,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 1006374740}
     m_Modifications:
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.118
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1718,6 +1842,10 @@ PrefabInstance:
     - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_Name
       value: Jhonmar - Bubble VFX 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1774,9 +1902,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cantidad_vida: 3
   objectRenderer: {fileID: 0}
-  color1: {fileID: 2100000, guid: 210e3424bab939946921aca2a0fc83d5, type: 2}
-  color2: {fileID: 2100000, guid: d48e189fd0d15ce448497c97b6360d4c, type: 2}
-  color3: {fileID: 2100000, guid: 294465667d65f504eb63baf2d4ff01da, type: 2}
+  color1: {fileID: 2100000, guid: 453e1d30d8206b744a644b4dd90c3e00, type: 2}
+  color2: {fileID: 2100000, guid: 47be791c528be904598e4b47484039b0, type: 2}
+  color3: {fileID: 2100000, guid: 8993b7bd479d0254f841675653dd4fcd, type: 2}
   bubbleVFX: {fileID: 0}
   bubbleMeshRenderer: {fileID: 0}
 --- !u!65 &311962429
@@ -1903,9 +2031,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cantidad_vida: 3
   objectRenderer: {fileID: 0}
-  color1: {fileID: 2100000, guid: 210e3424bab939946921aca2a0fc83d5, type: 2}
-  color2: {fileID: 2100000, guid: d48e189fd0d15ce448497c97b6360d4c, type: 2}
-  color3: {fileID: 2100000, guid: 294465667d65f504eb63baf2d4ff01da, type: 2}
+  color1: {fileID: 2100000, guid: 453e1d30d8206b744a644b4dd90c3e00, type: 2}
+  color2: {fileID: 2100000, guid: 47be791c528be904598e4b47484039b0, type: 2}
+  color3: {fileID: 2100000, guid: 8993b7bd479d0254f841675653dd4fcd, type: 2}
   bubbleVFX: {fileID: 0}
   bubbleMeshRenderer: {fileID: 0}
 --- !u!65 &314145269
@@ -2032,9 +2160,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cantidad_vida: 3
   objectRenderer: {fileID: 0}
-  color1: {fileID: 2100000, guid: 210e3424bab939946921aca2a0fc83d5, type: 2}
-  color2: {fileID: 2100000, guid: d48e189fd0d15ce448497c97b6360d4c, type: 2}
-  color3: {fileID: 2100000, guid: 294465667d65f504eb63baf2d4ff01da, type: 2}
+  color1: {fileID: 2100000, guid: 453e1d30d8206b744a644b4dd90c3e00, type: 2}
+  color2: {fileID: 2100000, guid: 47be791c528be904598e4b47484039b0, type: 2}
+  color3: {fileID: 2100000, guid: 8993b7bd479d0254f841675653dd4fcd, type: 2}
   bubbleVFX: {fileID: 0}
   bubbleMeshRenderer: {fileID: 0}
 --- !u!65 &353736515
@@ -2125,12 +2253,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 314145267}
     m_Modifications:
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.118
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2167,6 +2307,10 @@ PrefabInstance:
     - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_Name
       value: Jhonmar - Bubble VFX 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2182,12 +2326,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 1348473757}
     m_Modifications:
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.118
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2224,6 +2380,10 @@ PrefabInstance:
     - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_Name
       value: Jhonmar - Bubble VFX 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2239,12 +2399,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 1835359602}
     m_Modifications:
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.118
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2281,6 +2453,10 @@ PrefabInstance:
     - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_Name
       value: Jhonmar - Bubble VFX 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2342,9 +2518,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cantidad_vida: 3
   objectRenderer: {fileID: 0}
-  color1: {fileID: 2100000, guid: 210e3424bab939946921aca2a0fc83d5, type: 2}
-  color2: {fileID: 2100000, guid: d48e189fd0d15ce448497c97b6360d4c, type: 2}
-  color3: {fileID: 2100000, guid: 294465667d65f504eb63baf2d4ff01da, type: 2}
+  color1: {fileID: 2100000, guid: 453e1d30d8206b744a644b4dd90c3e00, type: 2}
+  color2: {fileID: 2100000, guid: 47be791c528be904598e4b47484039b0, type: 2}
+  color3: {fileID: 2100000, guid: 8993b7bd479d0254f841675653dd4fcd, type: 2}
   bubbleVFX: {fileID: 0}
   bubbleMeshRenderer: {fileID: 0}
 --- !u!65 &464867211
@@ -2435,12 +2611,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 528357188}
     m_Modifications:
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.118
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2477,6 +2665,10 @@ PrefabInstance:
     - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_Name
       value: Jhonmar - Bubble VFX 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2533,9 +2725,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cantidad_vida: 3
   objectRenderer: {fileID: 0}
-  color1: {fileID: 2100000, guid: 210e3424bab939946921aca2a0fc83d5, type: 2}
-  color2: {fileID: 2100000, guid: d48e189fd0d15ce448497c97b6360d4c, type: 2}
-  color3: {fileID: 2100000, guid: 294465667d65f504eb63baf2d4ff01da, type: 2}
+  color1: {fileID: 2100000, guid: 453e1d30d8206b744a644b4dd90c3e00, type: 2}
+  color2: {fileID: 2100000, guid: 47be791c528be904598e4b47484039b0, type: 2}
+  color3: {fileID: 2100000, guid: 8993b7bd479d0254f841675653dd4fcd, type: 2}
   bubbleVFX: {fileID: 0}
   bubbleMeshRenderer: {fileID: 0}
 --- !u!65 &480829125
@@ -2668,12 +2860,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 12455276}
     m_Modifications:
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.118
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2710,6 +2914,10 @@ PrefabInstance:
     - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_Name
       value: Jhonmar - Bubble VFX 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2771,9 +2979,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cantidad_vida: 3
   objectRenderer: {fileID: 0}
-  color1: {fileID: 2100000, guid: 210e3424bab939946921aca2a0fc83d5, type: 2}
-  color2: {fileID: 2100000, guid: d48e189fd0d15ce448497c97b6360d4c, type: 2}
-  color3: {fileID: 2100000, guid: 294465667d65f504eb63baf2d4ff01da, type: 2}
+  color1: {fileID: 2100000, guid: 453e1d30d8206b744a644b4dd90c3e00, type: 2}
+  color2: {fileID: 2100000, guid: 47be791c528be904598e4b47484039b0, type: 2}
+  color3: {fileID: 2100000, guid: 8993b7bd479d0254f841675653dd4fcd, type: 2}
   bubbleVFX: {fileID: 0}
   bubbleMeshRenderer: {fileID: 0}
 --- !u!65 &528357190
@@ -2869,12 +3077,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 464867209}
     m_Modifications:
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.118
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2911,6 +3131,10 @@ PrefabInstance:
     - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_Name
       value: Jhonmar - Bubble VFX 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2967,9 +3191,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cantidad_vida: 3
   objectRenderer: {fileID: 0}
-  color1: {fileID: 2100000, guid: 210e3424bab939946921aca2a0fc83d5, type: 2}
-  color2: {fileID: 2100000, guid: d48e189fd0d15ce448497c97b6360d4c, type: 2}
-  color3: {fileID: 2100000, guid: 294465667d65f504eb63baf2d4ff01da, type: 2}
+  color1: {fileID: 2100000, guid: 453e1d30d8206b744a644b4dd90c3e00, type: 2}
+  color2: {fileID: 2100000, guid: 47be791c528be904598e4b47484039b0, type: 2}
+  color3: {fileID: 2100000, guid: 8993b7bd479d0254f841675653dd4fcd, type: 2}
   bubbleVFX: {fileID: 0}
   bubbleMeshRenderer: {fileID: 0}
 --- !u!65 &588272043
@@ -3060,12 +3284,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 677252914}
     m_Modifications:
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.118
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3103,6 +3339,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jhonmar - Bubble VFX 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3122,12 +3362,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 2119838204}
     m_Modifications:
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.118
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3164,6 +3416,10 @@ PrefabInstance:
     - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_Name
       value: Jhonmar - Bubble VFX 1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3220,9 +3476,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cantidad_vida: 3
   objectRenderer: {fileID: 0}
-  color1: {fileID: 2100000, guid: 210e3424bab939946921aca2a0fc83d5, type: 2}
-  color2: {fileID: 2100000, guid: d48e189fd0d15ce448497c97b6360d4c, type: 2}
-  color3: {fileID: 2100000, guid: 294465667d65f504eb63baf2d4ff01da, type: 2}
+  color1: {fileID: 2100000, guid: 453e1d30d8206b744a644b4dd90c3e00, type: 2}
+  color2: {fileID: 2100000, guid: 47be791c528be904598e4b47484039b0, type: 2}
+  color3: {fileID: 2100000, guid: 8993b7bd479d0254f841675653dd4fcd, type: 2}
   bubbleVFX: {fileID: 0}
   bubbleMeshRenderer: {fileID: 0}
 --- !u!65 &677252916
@@ -3308,12 +3564,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 1037488822}
     m_Modifications:
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.118
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3350,6 +3618,10 @@ PrefabInstance:
     - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_Name
       value: Jhonmar - Bubble VFX 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3406,9 +3678,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cantidad_vida: 3
   objectRenderer: {fileID: 0}
-  color1: {fileID: 2100000, guid: 210e3424bab939946921aca2a0fc83d5, type: 2}
-  color2: {fileID: 2100000, guid: d48e189fd0d15ce448497c97b6360d4c, type: 2}
-  color3: {fileID: 2100000, guid: 294465667d65f504eb63baf2d4ff01da, type: 2}
+  color1: {fileID: 2100000, guid: 453e1d30d8206b744a644b4dd90c3e00, type: 2}
+  color2: {fileID: 2100000, guid: 47be791c528be904598e4b47484039b0, type: 2}
+  color3: {fileID: 2100000, guid: 8993b7bd479d0254f841675653dd4fcd, type: 2}
   bubbleVFX: {fileID: 0}
   bubbleMeshRenderer: {fileID: 0}
 --- !u!65 &709767051
@@ -3540,9 +3812,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cantidad_vida: 3
   objectRenderer: {fileID: 0}
-  color1: {fileID: 2100000, guid: 210e3424bab939946921aca2a0fc83d5, type: 2}
-  color2: {fileID: 2100000, guid: d48e189fd0d15ce448497c97b6360d4c, type: 2}
-  color3: {fileID: 2100000, guid: 294465667d65f504eb63baf2d4ff01da, type: 2}
+  color1: {fileID: 2100000, guid: 453e1d30d8206b744a644b4dd90c3e00, type: 2}
+  color2: {fileID: 2100000, guid: 47be791c528be904598e4b47484039b0, type: 2}
+  color3: {fileID: 2100000, guid: 8993b7bd479d0254f841675653dd4fcd, type: 2}
   bubbleVFX: {fileID: 0}
   bubbleMeshRenderer: {fileID: 0}
 --- !u!65 &732350412
@@ -3633,12 +3905,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 1606639231}
     m_Modifications:
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.118
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3675,6 +3959,10 @@ PrefabInstance:
     - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_Name
       value: Jhonmar - Bubble VFX 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3695,12 +3983,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 215052104}
     m_Modifications:
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.118
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3737,6 +4037,10 @@ PrefabInstance:
     - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_Name
       value: Jhonmar - Bubble VFX 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3793,9 +4097,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cantidad_vida: 3
   objectRenderer: {fileID: 0}
-  color1: {fileID: 2100000, guid: 210e3424bab939946921aca2a0fc83d5, type: 2}
-  color2: {fileID: 2100000, guid: d48e189fd0d15ce448497c97b6360d4c, type: 2}
-  color3: {fileID: 2100000, guid: 294465667d65f504eb63baf2d4ff01da, type: 2}
+  color1: {fileID: 2100000, guid: 453e1d30d8206b744a644b4dd90c3e00, type: 2}
+  color2: {fileID: 2100000, guid: 47be791c528be904598e4b47484039b0, type: 2}
+  color3: {fileID: 2100000, guid: 8993b7bd479d0254f841675653dd4fcd, type: 2}
   bubbleVFX: {fileID: 0}
   bubbleMeshRenderer: {fileID: 0}
 --- !u!65 &809824425
@@ -3881,12 +4185,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 982111329}
     m_Modifications:
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.118
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3923,6 +4239,10 @@ PrefabInstance:
     - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_Name
       value: Jhonmar - Bubble VFX 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3984,9 +4304,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cantidad_vida: 3
   objectRenderer: {fileID: 0}
-  color1: {fileID: 2100000, guid: 210e3424bab939946921aca2a0fc83d5, type: 2}
-  color2: {fileID: 2100000, guid: d48e189fd0d15ce448497c97b6360d4c, type: 2}
-  color3: {fileID: 2100000, guid: 294465667d65f504eb63baf2d4ff01da, type: 2}
+  color1: {fileID: 2100000, guid: 453e1d30d8206b744a644b4dd90c3e00, type: 2}
+  color2: {fileID: 2100000, guid: 47be791c528be904598e4b47484039b0, type: 2}
+  color3: {fileID: 2100000, guid: 8993b7bd479d0254f841675653dd4fcd, type: 2}
   bubbleVFX: {fileID: 0}
   bubbleMeshRenderer: {fileID: 0}
 --- !u!65 &870157166
@@ -4072,12 +4392,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 732350410}
     m_Modifications:
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.118
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4114,6 +4446,10 @@ PrefabInstance:
     - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_Name
       value: Jhonmar - Bubble VFX 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4134,12 +4470,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 193242590}
     m_Modifications:
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.118
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4176,6 +4524,10 @@ PrefabInstance:
     - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_Name
       value: Jhonmar - Bubble VFX 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4232,9 +4584,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cantidad_vida: 3
   objectRenderer: {fileID: 0}
-  color1: {fileID: 2100000, guid: 210e3424bab939946921aca2a0fc83d5, type: 2}
-  color2: {fileID: 2100000, guid: d48e189fd0d15ce448497c97b6360d4c, type: 2}
-  color3: {fileID: 2100000, guid: 294465667d65f504eb63baf2d4ff01da, type: 2}
+  color1: {fileID: 2100000, guid: 453e1d30d8206b744a644b4dd90c3e00, type: 2}
+  color2: {fileID: 2100000, guid: 47be791c528be904598e4b47484039b0, type: 2}
+  color3: {fileID: 2100000, guid: 8993b7bd479d0254f841675653dd4fcd, type: 2}
   bubbleVFX: {fileID: 0}
   bubbleMeshRenderer: {fileID: 0}
 --- !u!65 &961871249
@@ -4361,9 +4713,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cantidad_vida: 3
   objectRenderer: {fileID: 0}
-  color1: {fileID: 2100000, guid: 210e3424bab939946921aca2a0fc83d5, type: 2}
-  color2: {fileID: 2100000, guid: d48e189fd0d15ce448497c97b6360d4c, type: 2}
-  color3: {fileID: 2100000, guid: 294465667d65f504eb63baf2d4ff01da, type: 2}
+  color1: {fileID: 2100000, guid: 453e1d30d8206b744a644b4dd90c3e00, type: 2}
+  color2: {fileID: 2100000, guid: 47be791c528be904598e4b47484039b0, type: 2}
+  color3: {fileID: 2100000, guid: 8993b7bd479d0254f841675653dd4fcd, type: 2}
   bubbleVFX: {fileID: 0}
   bubbleMeshRenderer: {fileID: 0}
 --- !u!65 &982111331
@@ -4490,9 +4842,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cantidad_vida: 3
   objectRenderer: {fileID: 0}
-  color1: {fileID: 2100000, guid: 210e3424bab939946921aca2a0fc83d5, type: 2}
-  color2: {fileID: 2100000, guid: d48e189fd0d15ce448497c97b6360d4c, type: 2}
-  color3: {fileID: 2100000, guid: 294465667d65f504eb63baf2d4ff01da, type: 2}
+  color1: {fileID: 2100000, guid: 453e1d30d8206b744a644b4dd90c3e00, type: 2}
+  color2: {fileID: 2100000, guid: 47be791c528be904598e4b47484039b0, type: 2}
+  color3: {fileID: 2100000, guid: 8993b7bd479d0254f841675653dd4fcd, type: 2}
   bubbleVFX: {fileID: 0}
   bubbleMeshRenderer: {fileID: 0}
 --- !u!65 &1006374742
@@ -4578,12 +4930,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 1313222488}
     m_Modifications:
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.118
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4621,6 +4985,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jhonmar - Bubble VFX 1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4635,12 +5003,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 588272041}
     m_Modifications:
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.118
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4677,6 +5057,10 @@ PrefabInstance:
     - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_Name
       value: Jhonmar - Bubble VFX 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4733,9 +5117,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cantidad_vida: 3
   objectRenderer: {fileID: 1835359605}
-  color1: {fileID: 2100000, guid: 210e3424bab939946921aca2a0fc83d5, type: 2}
-  color2: {fileID: 2100000, guid: d48e189fd0d15ce448497c97b6360d4c, type: 2}
-  color3: {fileID: 2100000, guid: 294465667d65f504eb63baf2d4ff01da, type: 2}
+  color1: {fileID: 2100000, guid: 453e1d30d8206b744a644b4dd90c3e00, type: 2}
+  color2: {fileID: 2100000, guid: 47be791c528be904598e4b47484039b0, type: 2}
+  color3: {fileID: 2100000, guid: 8993b7bd479d0254f841675653dd4fcd, type: 2}
   bubbleVFX: {fileID: 0}
   bubbleMeshRenderer: {fileID: 0}
 --- !u!65 &1037488824
@@ -4862,9 +5246,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cantidad_vida: 3
   objectRenderer: {fileID: 0}
-  color1: {fileID: 2100000, guid: 210e3424bab939946921aca2a0fc83d5, type: 2}
-  color2: {fileID: 2100000, guid: d48e189fd0d15ce448497c97b6360d4c, type: 2}
-  color3: {fileID: 2100000, guid: 294465667d65f504eb63baf2d4ff01da, type: 2}
+  color1: {fileID: 2100000, guid: 453e1d30d8206b744a644b4dd90c3e00, type: 2}
+  color2: {fileID: 2100000, guid: 47be791c528be904598e4b47484039b0, type: 2}
+  color3: {fileID: 2100000, guid: 8993b7bd479d0254f841675653dd4fcd, type: 2}
   bubbleVFX: {fileID: 0}
   bubbleMeshRenderer: {fileID: 0}
 --- !u!65 &1065884511
@@ -4996,9 +5380,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cantidad_vida: 3
   objectRenderer: {fileID: 0}
-  color1: {fileID: 2100000, guid: 210e3424bab939946921aca2a0fc83d5, type: 2}
-  color2: {fileID: 2100000, guid: d48e189fd0d15ce448497c97b6360d4c, type: 2}
-  color3: {fileID: 2100000, guid: 294465667d65f504eb63baf2d4ff01da, type: 2}
+  color1: {fileID: 2100000, guid: 453e1d30d8206b744a644b4dd90c3e00, type: 2}
+  color2: {fileID: 2100000, guid: 47be791c528be904598e4b47484039b0, type: 2}
+  color3: {fileID: 2100000, guid: 8993b7bd479d0254f841675653dd4fcd, type: 2}
   bubbleVFX: {fileID: 0}
   bubbleMeshRenderer: {fileID: 0}
 --- !u!65 &1156323657
@@ -5125,9 +5509,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cantidad_vida: 3
   objectRenderer: {fileID: 1164988109}
-  color1: {fileID: 2100000, guid: 210e3424bab939946921aca2a0fc83d5, type: 2}
-  color2: {fileID: 2100000, guid: d48e189fd0d15ce448497c97b6360d4c, type: 2}
-  color3: {fileID: 2100000, guid: 294465667d65f504eb63baf2d4ff01da, type: 2}
+  color1: {fileID: 2100000, guid: 453e1d30d8206b744a644b4dd90c3e00, type: 2}
+  color2: {fileID: 2100000, guid: 47be791c528be904598e4b47484039b0, type: 2}
+  color3: {fileID: 2100000, guid: 8993b7bd479d0254f841675653dd4fcd, type: 2}
   bubbleVFX: {fileID: 0}
   bubbleMeshRenderer: {fileID: 0}
 --- !u!65 &1164988108
@@ -5329,9 +5713,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cantidad_vida: 3
   objectRenderer: {fileID: 0}
-  color1: {fileID: 2100000, guid: 210e3424bab939946921aca2a0fc83d5, type: 2}
-  color2: {fileID: 2100000, guid: d48e189fd0d15ce448497c97b6360d4c, type: 2}
-  color3: {fileID: 2100000, guid: 294465667d65f504eb63baf2d4ff01da, type: 2}
+  color1: {fileID: 2100000, guid: 453e1d30d8206b744a644b4dd90c3e00, type: 2}
+  color2: {fileID: 2100000, guid: 47be791c528be904598e4b47484039b0, type: 2}
+  color3: {fileID: 2100000, guid: 8993b7bd479d0254f841675653dd4fcd, type: 2}
   bubbleVFX: {fileID: 0}
   bubbleMeshRenderer: {fileID: 0}
 --- !u!65 &1198902422
@@ -5463,9 +5847,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cantidad_vida: 3
   objectRenderer: {fileID: 1217628548}
-  color1: {fileID: 2100000, guid: 210e3424bab939946921aca2a0fc83d5, type: 2}
-  color2: {fileID: 2100000, guid: d48e189fd0d15ce448497c97b6360d4c, type: 2}
-  color3: {fileID: 2100000, guid: 294465667d65f504eb63baf2d4ff01da, type: 2}
+  color1: {fileID: 2100000, guid: 453e1d30d8206b744a644b4dd90c3e00, type: 2}
+  color2: {fileID: 2100000, guid: 47be791c528be904598e4b47484039b0, type: 2}
+  color3: {fileID: 2100000, guid: 8993b7bd479d0254f841675653dd4fcd, type: 2}
   bubbleVFX: {fileID: 0}
   bubbleMeshRenderer: {fileID: 0}
 --- !u!65 &1217628547
@@ -5551,12 +5935,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 1274143372}
     m_Modifications:
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.118
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5593,6 +5989,10 @@ PrefabInstance:
     - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_Name
       value: Jhonmar - Bubble VFX 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5649,9 +6049,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cantidad_vida: 3
   objectRenderer: {fileID: 0}
-  color1: {fileID: 2100000, guid: 210e3424bab939946921aca2a0fc83d5, type: 2}
-  color2: {fileID: 2100000, guid: d48e189fd0d15ce448497c97b6360d4c, type: 2}
-  color3: {fileID: 2100000, guid: 294465667d65f504eb63baf2d4ff01da, type: 2}
+  color1: {fileID: 2100000, guid: 453e1d30d8206b744a644b4dd90c3e00, type: 2}
+  color2: {fileID: 2100000, guid: 47be791c528be904598e4b47484039b0, type: 2}
+  color3: {fileID: 2100000, guid: 8993b7bd479d0254f841675653dd4fcd, type: 2}
   bubbleVFX: {fileID: 0}
   bubbleMeshRenderer: {fileID: 0}
 --- !u!65 &1240560785
@@ -5778,9 +6178,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cantidad_vida: 3
   objectRenderer: {fileID: 0}
-  color1: {fileID: 2100000, guid: 210e3424bab939946921aca2a0fc83d5, type: 2}
-  color2: {fileID: 2100000, guid: d48e189fd0d15ce448497c97b6360d4c, type: 2}
-  color3: {fileID: 2100000, guid: 294465667d65f504eb63baf2d4ff01da, type: 2}
+  color1: {fileID: 2100000, guid: 453e1d30d8206b744a644b4dd90c3e00, type: 2}
+  color2: {fileID: 2100000, guid: 47be791c528be904598e4b47484039b0, type: 2}
+  color3: {fileID: 2100000, guid: 8993b7bd479d0254f841675653dd4fcd, type: 2}
   bubbleVFX: {fileID: 0}
   bubbleMeshRenderer: {fileID: 0}
 --- !u!65 &1274143374
@@ -5871,12 +6271,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 71364057}
     m_Modifications:
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.118
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5913,6 +6325,10 @@ PrefabInstance:
     - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_Name
       value: Jhonmar - Bubble VFX 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5969,9 +6385,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cantidad_vida: 3
   objectRenderer: {fileID: 0}
-  color1: {fileID: 2100000, guid: 210e3424bab939946921aca2a0fc83d5, type: 2}
-  color2: {fileID: 2100000, guid: d48e189fd0d15ce448497c97b6360d4c, type: 2}
-  color3: {fileID: 2100000, guid: 294465667d65f504eb63baf2d4ff01da, type: 2}
+  color1: {fileID: 2100000, guid: 453e1d30d8206b744a644b4dd90c3e00, type: 2}
+  color2: {fileID: 2100000, guid: 47be791c528be904598e4b47484039b0, type: 2}
+  color3: {fileID: 2100000, guid: 8993b7bd479d0254f841675653dd4fcd, type: 2}
   bubbleVFX: {fileID: 0}
   bubbleMeshRenderer: {fileID: 0}
 --- !u!65 &1313222490
@@ -6082,9 +6498,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cantidad_vida: 3
   objectRenderer: {fileID: 1344795676}
-  color1: {fileID: 2100000, guid: 210e3424bab939946921aca2a0fc83d5, type: 2}
-  color2: {fileID: 2100000, guid: d48e189fd0d15ce448497c97b6360d4c, type: 2}
-  color3: {fileID: 2100000, guid: 294465667d65f504eb63baf2d4ff01da, type: 2}
+  color1: {fileID: 2100000, guid: 453e1d30d8206b744a644b4dd90c3e00, type: 2}
+  color2: {fileID: 2100000, guid: 47be791c528be904598e4b47484039b0, type: 2}
+  color3: {fileID: 2100000, guid: 8993b7bd479d0254f841675653dd4fcd, type: 2}
   bubbleVFX: {fileID: 0}
   bubbleMeshRenderer: {fileID: 0}
 --- !u!65 &1344795675
@@ -6227,9 +6643,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cantidad_vida: 3
   objectRenderer: {fileID: 0}
-  color1: {fileID: 2100000, guid: 210e3424bab939946921aca2a0fc83d5, type: 2}
-  color2: {fileID: 2100000, guid: d48e189fd0d15ce448497c97b6360d4c, type: 2}
-  color3: {fileID: 2100000, guid: 294465667d65f504eb63baf2d4ff01da, type: 2}
+  color1: {fileID: 2100000, guid: 453e1d30d8206b744a644b4dd90c3e00, type: 2}
+  color2: {fileID: 2100000, guid: 47be791c528be904598e4b47484039b0, type: 2}
+  color3: {fileID: 2100000, guid: 8993b7bd479d0254f841675653dd4fcd, type: 2}
   bubbleVFX: {fileID: 0}
   bubbleMeshRenderer: {fileID: 0}
 --- !u!65 &1348473759
@@ -6315,12 +6731,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 1164988106}
     m_Modifications:
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.118
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6391,12 +6819,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 961871247}
     m_Modifications:
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.118
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6433,6 +6873,10 @@ PrefabInstance:
     - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_Name
       value: Jhonmar - Bubble VFX 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6489,9 +6933,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cantidad_vida: 3
   objectRenderer: {fileID: 0}
-  color1: {fileID: 2100000, guid: 210e3424bab939946921aca2a0fc83d5, type: 2}
-  color2: {fileID: 2100000, guid: d48e189fd0d15ce448497c97b6360d4c, type: 2}
-  color3: {fileID: 2100000, guid: 294465667d65f504eb63baf2d4ff01da, type: 2}
+  color1: {fileID: 2100000, guid: 453e1d30d8206b744a644b4dd90c3e00, type: 2}
+  color2: {fileID: 2100000, guid: 47be791c528be904598e4b47484039b0, type: 2}
+  color3: {fileID: 2100000, guid: 8993b7bd479d0254f841675653dd4fcd, type: 2}
   bubbleVFX: {fileID: 0}
   bubbleMeshRenderer: {fileID: 0}
 --- !u!65 &1405566956
@@ -6618,9 +7062,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cantidad_vida: 3
   objectRenderer: {fileID: 0}
-  color1: {fileID: 2100000, guid: 210e3424bab939946921aca2a0fc83d5, type: 2}
-  color2: {fileID: 2100000, guid: d48e189fd0d15ce448497c97b6360d4c, type: 2}
-  color3: {fileID: 2100000, guid: 294465667d65f504eb63baf2d4ff01da, type: 2}
+  color1: {fileID: 2100000, guid: 453e1d30d8206b744a644b4dd90c3e00, type: 2}
+  color2: {fileID: 2100000, guid: 47be791c528be904598e4b47484039b0, type: 2}
+  color3: {fileID: 2100000, guid: 8993b7bd479d0254f841675653dd4fcd, type: 2}
   bubbleVFX: {fileID: 0}
   bubbleMeshRenderer: {fileID: 0}
 --- !u!65 &1410032882
@@ -6706,12 +7150,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 1410032880}
     m_Modifications:
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.118
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6748,6 +7204,10 @@ PrefabInstance:
     - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_Name
       value: Jhonmar - Bubble VFX 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6763,12 +7223,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 176474245}
     m_Modifications:
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.118
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6805,6 +7277,10 @@ PrefabInstance:
     - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_Name
       value: Jhonmar - Bubble VFX 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6820,12 +7296,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 2056405871}
     m_Modifications:
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.118
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6862,6 +7350,10 @@ PrefabInstance:
     - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_Name
       value: Jhonmar - Bubble VFX 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6887,12 +7379,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 2124973189}
     m_Modifications:
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.118
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6929,6 +7433,10 @@ PrefabInstance:
     - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_Name
       value: Jhonmar - Bubble VFX 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7023,12 +7531,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 1344795678}
     m_Modifications:
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.118
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7089,12 +7609,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 1724018760}
     m_Modifications:
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.118
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7131,6 +7663,10 @@ PrefabInstance:
     - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_Name
       value: Jhonmar - Bubble VFX 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7357,9 +7893,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cantidad_vida: 3
   objectRenderer: {fileID: 1835359605}
-  color1: {fileID: 2100000, guid: 210e3424bab939946921aca2a0fc83d5, type: 2}
-  color2: {fileID: 2100000, guid: d48e189fd0d15ce448497c97b6360d4c, type: 2}
-  color3: {fileID: 2100000, guid: 294465667d65f504eb63baf2d4ff01da, type: 2}
+  color1: {fileID: 2100000, guid: 453e1d30d8206b744a644b4dd90c3e00, type: 2}
+  color2: {fileID: 2100000, guid: 47be791c528be904598e4b47484039b0, type: 2}
+  color3: {fileID: 2100000, guid: 8993b7bd479d0254f841675653dd4fcd, type: 2}
   bubbleVFX: {fileID: 0}
   bubbleMeshRenderer: {fileID: 0}
 --- !u!65 &1567584846
@@ -7445,12 +7981,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 208979416}
     m_Modifications:
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.118
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7488,6 +8036,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jhonmar - Bubble VFX 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7502,12 +8054,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 1240560783}
     m_Modifications:
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.118
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7544,6 +8108,10 @@ PrefabInstance:
     - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_Name
       value: Jhonmar - Bubble VFX 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7559,12 +8127,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 1710561702}
     m_Modifications:
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.118
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7601,6 +8181,10 @@ PrefabInstance:
     - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_Name
       value: Jhonmar - Bubble VFX 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7657,9 +8241,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cantidad_vida: 3
   objectRenderer: {fileID: 0}
-  color1: {fileID: 2100000, guid: 210e3424bab939946921aca2a0fc83d5, type: 2}
-  color2: {fileID: 2100000, guid: d48e189fd0d15ce448497c97b6360d4c, type: 2}
-  color3: {fileID: 2100000, guid: 294465667d65f504eb63baf2d4ff01da, type: 2}
+  color1: {fileID: 2100000, guid: 453e1d30d8206b744a644b4dd90c3e00, type: 2}
+  color2: {fileID: 2100000, guid: 47be791c528be904598e4b47484039b0, type: 2}
+  color3: {fileID: 2100000, guid: 8993b7bd479d0254f841675653dd4fcd, type: 2}
   bubbleVFX: {fileID: 0}
   bubbleMeshRenderer: {fileID: 0}
 --- !u!65 &1606639233
@@ -7750,12 +8334,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 1156323655}
     m_Modifications:
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.118
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7792,6 +8388,10 @@ PrefabInstance:
     - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_Name
       value: Jhonmar - Bubble VFX 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7853,9 +8453,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cantidad_vida: 3
   objectRenderer: {fileID: 0}
-  color1: {fileID: 2100000, guid: 210e3424bab939946921aca2a0fc83d5, type: 2}
-  color2: {fileID: 2100000, guid: d48e189fd0d15ce448497c97b6360d4c, type: 2}
-  color3: {fileID: 2100000, guid: 294465667d65f504eb63baf2d4ff01da, type: 2}
+  color1: {fileID: 2100000, guid: 453e1d30d8206b744a644b4dd90c3e00, type: 2}
+  color2: {fileID: 2100000, guid: 47be791c528be904598e4b47484039b0, type: 2}
+  color3: {fileID: 2100000, guid: 8993b7bd479d0254f841675653dd4fcd, type: 2}
   bubbleVFX: {fileID: 0}
   bubbleMeshRenderer: {fileID: 0}
 --- !u!65 &1703713956
@@ -7982,9 +8582,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cantidad_vida: 3
   objectRenderer: {fileID: 0}
-  color1: {fileID: 2100000, guid: 210e3424bab939946921aca2a0fc83d5, type: 2}
-  color2: {fileID: 2100000, guid: d48e189fd0d15ce448497c97b6360d4c, type: 2}
-  color3: {fileID: 2100000, guid: 294465667d65f504eb63baf2d4ff01da, type: 2}
+  color1: {fileID: 2100000, guid: 453e1d30d8206b744a644b4dd90c3e00, type: 2}
+  color2: {fileID: 2100000, guid: 47be791c528be904598e4b47484039b0, type: 2}
+  color3: {fileID: 2100000, guid: 8993b7bd479d0254f841675653dd4fcd, type: 2}
   bubbleVFX: {fileID: 0}
   bubbleMeshRenderer: {fileID: 0}
 --- !u!65 &1710561704
@@ -8070,12 +8670,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 1850229545}
     m_Modifications:
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.118
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8112,6 +8724,10 @@ PrefabInstance:
     - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_Name
       value: Jhonmar - Bubble VFX 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8173,9 +8789,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cantidad_vida: 3
   objectRenderer: {fileID: 1835359605}
-  color1: {fileID: 2100000, guid: 210e3424bab939946921aca2a0fc83d5, type: 2}
-  color2: {fileID: 2100000, guid: d48e189fd0d15ce448497c97b6360d4c, type: 2}
-  color3: {fileID: 2100000, guid: 294465667d65f504eb63baf2d4ff01da, type: 2}
+  color1: {fileID: 2100000, guid: 453e1d30d8206b744a644b4dd90c3e00, type: 2}
+  color2: {fileID: 2100000, guid: 47be791c528be904598e4b47484039b0, type: 2}
+  color3: {fileID: 2100000, guid: 8993b7bd479d0254f841675653dd4fcd, type: 2}
   bubbleVFX: {fileID: 0}
   bubbleMeshRenderer: {fileID: 0}
 --- !u!65 &1722640494
@@ -8302,9 +8918,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cantidad_vida: 3
   objectRenderer: {fileID: 0}
-  color1: {fileID: 2100000, guid: 210e3424bab939946921aca2a0fc83d5, type: 2}
-  color2: {fileID: 2100000, guid: d48e189fd0d15ce448497c97b6360d4c, type: 2}
-  color3: {fileID: 2100000, guid: 294465667d65f504eb63baf2d4ff01da, type: 2}
+  color1: {fileID: 2100000, guid: 453e1d30d8206b744a644b4dd90c3e00, type: 2}
+  color2: {fileID: 2100000, guid: 47be791c528be904598e4b47484039b0, type: 2}
+  color3: {fileID: 2100000, guid: 8993b7bd479d0254f841675653dd4fcd, type: 2}
   bubbleVFX: {fileID: 0}
   bubbleMeshRenderer: {fileID: 0}
 --- !u!65 &1724018762
@@ -8400,12 +9016,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 261959056}
     m_Modifications:
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.118
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8442,6 +9070,10 @@ PrefabInstance:
     - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_Name
       value: Jhonmar - Bubble VFX 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8457,12 +9089,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 311962427}
     m_Modifications:
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.118
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8499,6 +9143,10 @@ PrefabInstance:
     - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_Name
       value: Jhonmar - Bubble VFX 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8514,12 +9162,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 480829123}
     m_Modifications:
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.118
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8556,6 +9216,10 @@ PrefabInstance:
     - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_Name
       value: Jhonmar - Bubble VFX 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8617,9 +9281,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cantidad_vida: 3
   objectRenderer: {fileID: 1835359605}
-  color1: {fileID: 2100000, guid: 210e3424bab939946921aca2a0fc83d5, type: 2}
-  color2: {fileID: 2100000, guid: d48e189fd0d15ce448497c97b6360d4c, type: 2}
-  color3: {fileID: 2100000, guid: 294465667d65f504eb63baf2d4ff01da, type: 2}
+  color1: {fileID: 2100000, guid: 453e1d30d8206b744a644b4dd90c3e00, type: 2}
+  color2: {fileID: 2100000, guid: 47be791c528be904598e4b47484039b0, type: 2}
+  color3: {fileID: 2100000, guid: 8993b7bd479d0254f841675653dd4fcd, type: 2}
   bubbleVFX: {fileID: 0}
   bubbleMeshRenderer: {fileID: 0}
 --- !u!65 &1835359604
@@ -8746,9 +9410,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cantidad_vida: 3
   objectRenderer: {fileID: 0}
-  color1: {fileID: 2100000, guid: 210e3424bab939946921aca2a0fc83d5, type: 2}
-  color2: {fileID: 2100000, guid: d48e189fd0d15ce448497c97b6360d4c, type: 2}
-  color3: {fileID: 2100000, guid: 294465667d65f504eb63baf2d4ff01da, type: 2}
+  color1: {fileID: 2100000, guid: 453e1d30d8206b744a644b4dd90c3e00, type: 2}
+  color2: {fileID: 2100000, guid: 47be791c528be904598e4b47484039b0, type: 2}
+  color3: {fileID: 2100000, guid: 8993b7bd479d0254f841675653dd4fcd, type: 2}
   bubbleVFX: {fileID: 0}
   bubbleMeshRenderer: {fileID: 0}
 --- !u!65 &1845149800
@@ -8875,9 +9539,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cantidad_vida: 3
   objectRenderer: {fileID: 1850229548}
-  color1: {fileID: 2100000, guid: 210e3424bab939946921aca2a0fc83d5, type: 2}
-  color2: {fileID: 2100000, guid: d48e189fd0d15ce448497c97b6360d4c, type: 2}
-  color3: {fileID: 2100000, guid: 294465667d65f504eb63baf2d4ff01da, type: 2}
+  color1: {fileID: 2100000, guid: 453e1d30d8206b744a644b4dd90c3e00, type: 2}
+  color2: {fileID: 2100000, guid: 47be791c528be904598e4b47484039b0, type: 2}
+  color3: {fileID: 2100000, guid: 8993b7bd479d0254f841675653dd4fcd, type: 2}
   bubbleVFX: {fileID: 0}
   bubbleMeshRenderer: {fileID: 0}
 --- !u!65 &1850229547
@@ -8973,12 +9637,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 709767049}
     m_Modifications:
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.118
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9015,6 +9691,10 @@ PrefabInstance:
     - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_Name
       value: Jhonmar - Bubble VFX 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9161,12 +9841,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 870157164}
     m_Modifications:
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.118
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9203,6 +9895,10 @@ PrefabInstance:
     - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_Name
       value: Jhonmar - Bubble VFX 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9218,12 +9914,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 1198902420}
     m_Modifications:
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.118
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9260,6 +9968,10 @@ PrefabInstance:
     - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_Name
       value: Jhonmar - Bubble VFX 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9316,9 +10028,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cantidad_vida: 3
   objectRenderer: {fileID: 0}
-  color1: {fileID: 2100000, guid: 210e3424bab939946921aca2a0fc83d5, type: 2}
-  color2: {fileID: 2100000, guid: d48e189fd0d15ce448497c97b6360d4c, type: 2}
-  color3: {fileID: 2100000, guid: 294465667d65f504eb63baf2d4ff01da, type: 2}
+  color1: {fileID: 2100000, guid: 453e1d30d8206b744a644b4dd90c3e00, type: 2}
+  color2: {fileID: 2100000, guid: 47be791c528be904598e4b47484039b0, type: 2}
+  color3: {fileID: 2100000, guid: 8993b7bd479d0254f841675653dd4fcd, type: 2}
   bubbleVFX: {fileID: 0}
   bubbleMeshRenderer: {fileID: 0}
 --- !u!65 &2056405873
@@ -9578,12 +10290,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 1722640492}
     m_Modifications:
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.118
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9620,6 +10344,10 @@ PrefabInstance:
     - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_Name
       value: Jhonmar - Bubble VFX 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9640,12 +10368,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 1703713954}
     m_Modifications:
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.118
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9682,6 +10422,10 @@ PrefabInstance:
     - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_Name
       value: Jhonmar - Bubble VFX 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9738,9 +10482,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cantidad_vida: 3
   objectRenderer: {fileID: 0}
-  color1: {fileID: 2100000, guid: 210e3424bab939946921aca2a0fc83d5, type: 2}
-  color2: {fileID: 2100000, guid: d48e189fd0d15ce448497c97b6360d4c, type: 2}
-  color3: {fileID: 2100000, guid: 294465667d65f504eb63baf2d4ff01da, type: 2}
+  color1: {fileID: 2100000, guid: 453e1d30d8206b744a644b4dd90c3e00, type: 2}
+  color2: {fileID: 2100000, guid: 47be791c528be904598e4b47484039b0, type: 2}
+  color3: {fileID: 2100000, guid: 8993b7bd479d0254f841675653dd4fcd, type: 2}
   bubbleVFX: {fileID: 0}
   bubbleMeshRenderer: {fileID: 0}
 --- !u!65 &2119838206
@@ -9867,9 +10611,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cantidad_vida: 3
   objectRenderer: {fileID: 0}
-  color1: {fileID: 2100000, guid: 210e3424bab939946921aca2a0fc83d5, type: 2}
-  color2: {fileID: 2100000, guid: d48e189fd0d15ce448497c97b6360d4c, type: 2}
-  color3: {fileID: 2100000, guid: 294465667d65f504eb63baf2d4ff01da, type: 2}
+  color1: {fileID: 2100000, guid: 453e1d30d8206b744a644b4dd90c3e00, type: 2}
+  color2: {fileID: 2100000, guid: 47be791c528be904598e4b47484039b0, type: 2}
+  color3: {fileID: 2100000, guid: 8993b7bd479d0254f841675653dd4fcd, type: 2}
   bubbleVFX: {fileID: 0}
   bubbleMeshRenderer: {fileID: 0}
 --- !u!65 &2124973191
@@ -9955,12 +10699,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 1217628545}
     m_Modifications:
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.118
       objectReference: {fileID: 0}
     - target: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9997,6 +10753,10 @@ PrefabInstance:
     - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
       propertyPath: m_Name
       value: Jhonmar - Bubble VFX 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963893895178770844, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
