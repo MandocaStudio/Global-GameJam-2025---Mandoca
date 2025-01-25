@@ -1,6 +1,7 @@
-using System.Numerics;
+using System.Threading.Tasks;
+using Cysharp.Threading.Tasks;
+using Unity.Mathematics;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 
 public class gridMovement : MonoBehaviour
@@ -10,20 +11,23 @@ public class gridMovement : MonoBehaviour
 
     [SerializeField] private float speed;
 
-    [SerializeField] private UnityEngine.Vector3 movePoint;
+    [SerializeField] private Vector3 movePoint;
 
-    [SerializeField] private UnityEngine.Vector3 targetPosition;
+    [SerializeField] private Vector3 targetPosition;
 
 
-    [SerializeField] private UnityEngine.Vector3 input;
+    [SerializeField] private Vector3 input;
 
     [SerializeField] private bool canMove;
 
-    [SerializeField] private UnityEngine.Vector3 cubeRadius;
+    [SerializeField] private Vector3 cubeRadius;
+
+
+    [SerializeField] private Transform playerTransform;
 
     void Start()
     {
-        //targetPosition = transform.position;
+        movePoint = transform.position;
     }
 
     // Update is called once per frame
@@ -35,24 +39,54 @@ public class gridMovement : MonoBehaviour
 
         if (canMove)
         {
-            transform.position = UnityEngine.Vector3.MoveTowards(transform.position, movePoint, speed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, movePoint, speed * Time.deltaTime);
 
-            if (UnityEngine.Vector3.Distance(transform.position, movePoint) == 0)
+            if (Vector3.Distance(transform.position, movePoint) == 0)
             {
                 canMove = false;
 
-                Debug.Log("");
             }
         }
 
 
 
-        if ((input.x == 1 ^ input.y == 1 ^ input.x == -1 ^ input.y == -1) && !canMove)
+        if ((input.x == 1 ^ input.z == 1 ^ input.x == -1 ^ input.z == -1) && !canMove)
         {
+
+
+            rotatePlayer();
             canMove = true;
             movePoint += input;
         }
 
+    }
+
+    private void rotatePlayer()
+    {
+        if (input.x == 1)
+        {
+            playerTransform.transform.rotation = Quaternion.Euler(0, 90, 0);
+            return;
+        }
+        else if (input.x == -1)
+        {
+            playerTransform.transform.rotation = Quaternion.Euler(0, 270, 0);
+            return;
+
+        }
+
+        else if (input.z == -1)
+        {
+            playerTransform.transform.rotation = Quaternion.Euler(0, 180, 0);
+            return;
+
+        }
+        else if (input.z == 1)
+        {
+            playerTransform.transform.rotation = Quaternion.Euler(0, 360, 0);
+            return;
+
+        }
     }
 
     private void OnDrawGizmos()
@@ -61,8 +95,5 @@ public class gridMovement : MonoBehaviour
         Gizmos.DrawWireCube(movePoint + targetPosition, cubeRadius);
     }
 
-    private void OnCollisionEnter(Collision other)
-    {
 
-    }
 }
