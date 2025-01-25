@@ -9,7 +9,7 @@ public class gridMovement : MonoBehaviour
 
 
 
-    [SerializeField] private float speed;
+    [SerializeField] public float speed;
 
     [SerializeField] private Vector3 movePoint;
 
@@ -24,6 +24,8 @@ public class gridMovement : MonoBehaviour
 
 
     [SerializeField] private Transform playerTransform;
+
+
 
     void Start()
     {
@@ -63,30 +65,34 @@ public class gridMovement : MonoBehaviour
 
     private void rotatePlayer()
     {
-        if (input.x == 1)
+        if (speed != 0)
         {
-            playerTransform.transform.rotation = Quaternion.Euler(0, 90, 0);
-            return;
-        }
-        else if (input.x == -1)
-        {
-            playerTransform.transform.rotation = Quaternion.Euler(0, 270, 0);
-            return;
+            if (input.x == 1)
+            {
+                playerTransform.transform.rotation = Quaternion.Euler(0, 90, 0);
+                return;
+            }
+            else if (input.x == -1)
+            {
+                playerTransform.transform.rotation = Quaternion.Euler(0, 270, 0);
+                return;
 
+            }
+
+            else if (input.z == -1)
+            {
+                playerTransform.transform.rotation = Quaternion.Euler(0, 180, 0);
+                return;
+
+            }
+            else if (input.z == 1)
+            {
+                playerTransform.transform.rotation = Quaternion.Euler(0, 360, 0);
+                return;
+
+            }
         }
 
-        else if (input.z == -1)
-        {
-            playerTransform.transform.rotation = Quaternion.Euler(0, 180, 0);
-            return;
-
-        }
-        else if (input.z == 1)
-        {
-            playerTransform.transform.rotation = Quaternion.Euler(0, 360, 0);
-            return;
-
-        }
     }
 
     private void OnDrawGizmos()
