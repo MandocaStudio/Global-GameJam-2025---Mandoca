@@ -16,17 +16,7 @@ public class Vida : MonoBehaviour
 
     }
 
-    private void OnCollisionEnter(Collision other)
-    {
-        Debug.Log("Colision");
-    }
 
-
-
-    private void OnCollisionStay(Collision other)
-    {
-        Debug.Log("ENCIMA");
-    }
     private void OnCollisionExit(Collision other)
     {
         if (other.gameObject.tag == "Enemigo" || other.gameObject.tag == "Player")
