@@ -60,4 +60,9 @@ public class gridMovement : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireCube(movePoint + targetPosition, cubeRadius);
     }
+
+    private void OnCollisionEnter(Collision other)
+    {
+
+    }
 }

@@ -1,32 +1,39 @@
 using UnityEngine;
 
-public class vida : MonoBehaviour
+public class Vida : MonoBehaviour
 {
     public float cantidad_vida = 3;
-    
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
-    void OnCollitionEnter(Collision collision){
-            Debug.Log("Colision");
-        }
-        void OnCollitionStay (Collision collision){
-            Debug.Log ("ENCIMA");
-        }
-        void OnCollitionExit (Collision collision){
-            if (collision.gameObject.tag == "Enemigo" || collision.gameObject.tag == "jugador"){
-                cantidad_vida -= 1;
-                //cambia el color de la esfera                 
-            }
+    private void OnCollisionEnter(Collision other)
+    {
+        Debug.Log("Colision");
+    }
 
+
+
+    private void OnCollisionStay(Collision other)
+    {
+        Debug.Log("ENCIMA");
+    }
+    private void OnCollisionExit(Collision other)
+    {
+        if (other.gameObject.tag == "Enemigo" || other.gameObject.tag == "Player")
+        {
+            cantidad_vida -= 1;
+            //cambia el color de la esfera                 
         }
+
+    }
 }
