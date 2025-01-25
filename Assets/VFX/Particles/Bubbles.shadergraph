@@ -11,6 +11,9 @@
         },
         {
             "m_Id": "4dbde8cccd014bec911556286501cee0"
+        },
+        {
+            "m_Id": "53cd0a4d4205489bb7256941b1fb4818"
         }
     ],
     "m_Keywords": [],
@@ -884,6 +887,36 @@
 }
 
 {
+    "m_SGVersion": 3,
+    "m_Type": "UnityEditor.ShaderGraph.Internal.ColorShaderProperty",
+    "m_ObjectId": "53cd0a4d4205489bb7256941b1fb4818",
+    "m_Guid": {
+        "m_GuidSerialized": "e6975927-ba06-42ab-b91f-c6d0bf41f54a"
+    },
+    "m_Name": "Color",
+    "m_DefaultRefNameVersion": 1,
+    "m_RefNameGeneratedByDisplayName": "Color",
+    "m_DefaultReferenceName": "_Color",
+    "m_OverrideReferenceName": "",
+    "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
+    "m_DismissedVersion": 0,
+    "m_Precision": 0,
+    "overrideHLSLDeclaration": false,
+    "hlslDeclarationOverride": 0,
+    "m_Hidden": false,
+    "m_Value": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+    },
+    "isMainColor": false,
+    "m_ColorMode": 0
+}
+
+{
     "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.PropertyNode",
     "m_ObjectId": "5606bdedbd7b42968bfed1fd861eab23",
@@ -933,6 +966,9 @@
         },
         {
             "m_Id": "4dbde8cccd014bec911556286501cee0"
+        },
+        {
+            "m_Id": "53cd0a4d4205489bb7256941b1fb4818"
         }
     ]
 }
@@ -1206,10 +1242,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -1502.0001220703125,
-            "y": 394.0002136230469,
+            "x": -1503.0001220703125,
+            "y": 394.0000305175781,
             "width": 208.0,
-            "height": 301.9999084472656
+            "height": 301.9999694824219
         }
     },
     "m_Slots": [
@@ -1383,7 +1419,7 @@
         "m_SerializableColors": []
     },
     "m_TextureType": 0,
-    "m_NormalMapSpace": 0,
+    "m_NormalMapSpace": 1,
     "m_EnableGlobalMipBias": true,
     "m_MipSamplingMode": 0
 }
