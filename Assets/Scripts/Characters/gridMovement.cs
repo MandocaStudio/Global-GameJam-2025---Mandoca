@@ -52,6 +52,9 @@ public class gridMovement : MonoBehaviour
         {
             transform.position = Vector3.MoveTowards(transform.position, movePoint, speed * Time.deltaTime);
 
+            // Notifica a los enemigos que el jugador se movió
+            GameEvents.NotifyPlayerMove();
+
             if (Vector3.Distance(transform.position, movePoint) == 0)
             {
                 canMove = false;
