@@ -8,6 +8,8 @@ public class Vida : MonoBehaviour
     public Renderer objectRenderer;
     public Material color1, color2, color3;
 
+    [SerializeField] private GameObject bubbleVFX;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -26,6 +28,8 @@ public class Vida : MonoBehaviour
         {
             objectRenderer.material = color3;
         }
+
+        bubbleVFX = transform.GetChild(0).gameObject;
     }
 
     // Update is called once per frame
@@ -67,6 +71,9 @@ public class Vida : MonoBehaviour
     {
         await UniTask.Delay(500);
         Player.speed = 0;
+        bubbleVFX.SetActive(true);
         Destroy(gameObject);
+
+
     }
 }
