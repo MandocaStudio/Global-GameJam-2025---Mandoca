@@ -32,4 +32,6 @@ public class MasterVolumeController : MonoBehaviour
         // Guardar el valor en PlayerPrefs
         PlayerPrefs.SetFloat(MasterVolumeKey, volume);
     }
+
+    OnValueChange()
 }
