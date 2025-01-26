@@ -70,30 +70,46 @@ public class Vida : MonoBehaviour
 
 
 
-    private async UniTask OnCollisionEnter(Collision other)
+    private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
             if (cantidad_vida == 1)
             {
                 gridMovement playerScript = other.collider.GetComponent<gridMovement>();
-                await destroyBubble(playerScript);
+                destroyBubbleForPlayer(playerScript);
             }
         }
 
-        if (other.gameObject.CompareTag("Enemigo"))
-        {
-            if (cantidad_vida == 1)
-            {
-                enemyMovement enemyScript = other.collider.GetComponent<enemyMovement>();
-                enemyScript.muelto = true;
-            }
-        }
+        // else if (other.gameObject.CompareTag("Enemigo"))
+        // {
+        //     if (cantidad_vida == 1)
+        //     {
+        //         enemyMovement enemyScript = other.collider.GetComponent<enemyMovement>();
+        //         destroyBubbleForEnemy(enemyScript);
+        //     }
+        // }
     }
 
+    public async void destroyBubbleForEnemy(Rigidbody rbEnemy)
+    {
+        await UniTask.Delay(500);
+        bubbleVFX.SetActive(true);
+        bubbleMeshRenderer.enabled = false;
+
+        rbEnemy.constraints = RigidbodyConstraints.FreezePositionX
+                       | RigidbodyConstraints.FreezePositionZ
+                       | RigidbodyConstraints.FreezeRotationX
+                       | RigidbodyConstraints.FreezeRotationY
+                       | RigidbodyConstraints.FreezeRotationZ;
+
+        rbEnemy.useGravity = true;
+        Destroy(gameObject);
 
 
-    private async UniTask destroyBubble(gridMovement Player)
+    }
+
+    private async void destroyBubbleForPlayer(gridMovement Player)
     {
         await UniTask.Delay(500);
         Player.muelto = true;

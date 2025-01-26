@@ -6,6 +6,8 @@ public class enemyMovement : MonoBehaviour
 
     [SerializeField] private Transform playerTransform;
 
+    [SerializeField] private Rigidbody rbEnemy;
+
     [SerializeField] private gridMovement playerScript;
 
     [SerializeField] private float speed;
@@ -13,6 +15,8 @@ public class enemyMovement : MonoBehaviour
     [SerializeField] private Vector3 targetPosition;
 
     [SerializeField] private Vida bubbleHealth;
+
+
 
     public bool muelto;
 
@@ -22,6 +26,8 @@ public class enemyMovement : MonoBehaviour
         playerTransform = GameObject.Find("sapito").GetComponent<Transform>();
 
         playerScript = GameObject.Find("sapito").GetComponent<gridMovement>();
+
+        rbEnemy = GetComponent<Rigidbody>();
     }
 
 
@@ -40,6 +46,20 @@ public class enemyMovement : MonoBehaviour
         GameEvents.OnPlayerMove -= MoveTowardsPlayer;
 
     }
+
+    // private void Update()
+    // {
+    //     if (muelto)
+    //     {
+    //         rbEnemy.constraints = RigidbodyConstraints.FreezePositionX
+    //                                | RigidbodyConstraints.FreezePositionZ
+    //                                | RigidbodyConstraints.FreezeRotationX
+    //                                | RigidbodyConstraints.FreezeRotationY
+    //                                | RigidbodyConstraints.FreezeRotationZ;
+
+    //         rbEnemy.useGravity = true;
+    //     }
+    // }
 
     // Update is called once per frame
     private void MoveTowardsPlayer()
@@ -98,7 +118,8 @@ public class enemyMovement : MonoBehaviour
 
             if (bubbleHealth.cantidad_vida == 1)
             {
-                bubbleHealth.bubbleDamage();
+                muelto = true;
+                bubbleHealth.destroyBubbleForEnemy(rbEnemy);
 
             }
 
