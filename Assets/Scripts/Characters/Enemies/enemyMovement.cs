@@ -10,6 +10,8 @@ public class enemyMovement : MonoBehaviour
 
     [SerializeField] private Vector3 targetPosition;
 
+    [SerializeField] private Vida bubbleHealth;
+
     void Start()
     {
 
@@ -31,17 +33,48 @@ public class enemyMovement : MonoBehaviour
     private void MoveTowardsPlayer()
     {
 
-        targetPosition = playerTransform.transform.position;
+        // Obtén la posición objetivo (del jugador)
+        targetPosition = playerTransform.position;
 
-        int randomRange = Random.Range(0, 3);
+        // Calcula las diferencias en los ejes X y Z
+        float distanceX = Mathf.Abs(targetPosition.x - transform.position.x);
+        float distanceZ = Mathf.Abs(targetPosition.z - transform.position.z);
 
-        if (randomRange == 1)
+        // Decide en qué eje moverse (prioriza el eje con mayor distancia)
+        if (distanceX > distanceZ)
         {
-
+            // Mueve en el eje X
+            targetPosition.z = transform.position.z; // Mantén la posición Z actual
+        }
+        else
+        {
+            // Mueve en el eje Z
+            targetPosition.x = transform.position.x; // Mantén la posición X actual
         }
 
+        // Mueve el objeto hacia la posición objetivo solo en un eje
         transform.position = Vector3.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
     }
+
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("bubble"))
+        {
+            bubbleHealth = other.GetComponent<Vida>();
+
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("bubble"))
+        {
+
+
+            bubbleHealth.cantidad_vida -= 1;
+        }
+    }
+
 
 
 }
