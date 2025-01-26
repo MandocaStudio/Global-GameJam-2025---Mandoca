@@ -108,10 +108,6 @@ public class gridMovement : MonoBehaviour
                                | RigidbodyConstraints.FreezeRotationZ;
 
         rbPlayer.useGravity = true;
-
-
-
-
     }
 
 
