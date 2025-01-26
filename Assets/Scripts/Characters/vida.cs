@@ -1,6 +1,7 @@
 using System.Threading.Tasks;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Vida : MonoBehaviour
 {
@@ -11,6 +12,15 @@ public class Vida : MonoBehaviour
     [SerializeField] private GameObject bubbleVFX;
 
     [SerializeField] private MeshRenderer bubbleMeshRenderer;
+
+    [SerializeField] AudioClip amarillo, rojo, rojoRojito, playerFall;
+
+    [SerializeField] AudioSource sonidos;
+
+
+
+
+
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -37,7 +47,6 @@ public class Vida : MonoBehaviour
 
         bubbleVFX.SetActive(false);
 
-
     }
 
     // Update is called once per frame
@@ -61,10 +70,15 @@ public class Vida : MonoBehaviour
         if (cantidad_vida == 2)
         {
             objectRenderer.material = color2;
+
+            sonidos.PlayOneShot(amarillo);
         }
         if (cantidad_vida == 1)
         {
             objectRenderer.material = color3;
+            sonidos.PlayOneShot(rojo);
+
+
         }
     }
 
@@ -93,6 +107,9 @@ public class Vida : MonoBehaviour
 
     public async void destroyBubbleForEnemy(Rigidbody rbEnemy, AudioClip sonido)
     {
+        enemyMovement enemy = rbEnemy.GetComponent<enemyMovement>();
+
+        enemy.muelto = true;
         await UniTask.Delay(500);
         bubbleVFX.SetActive(true);
         bubbleMeshRenderer.enabled = false;
@@ -121,15 +138,24 @@ public class Vida : MonoBehaviour
 
         //Player.speed = 0;
         bubbleVFX.SetActive(true);
+        sonidos.PlayOneShot(rojoRojito);
+
 
         bubbleMeshRenderer.enabled = false;
 
         await UniTask.Delay(1000);
 
         Player.allowFall();
+
+        sonidos.PlayOneShot(playerFall);
+
         Destroy(gameObject);
 
+        await UniTask.Delay(1000);
 
+
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(currentSceneIndex);
 
     }
 }

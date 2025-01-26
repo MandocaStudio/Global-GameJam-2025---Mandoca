@@ -45,6 +45,8 @@ public class gridMovement : MonoBehaviour
         playerTransform = GetComponent<Transform>();
         movePoint = transform.position;
 
+        animations["Armature|Idle"].wrapMode = WrapMode.Loop;
+
 
         animations.Play("Armature|Idle");
     }
@@ -76,7 +78,13 @@ public class gridMovement : MonoBehaviour
             }
         }
 
-
+        if (!animations.IsPlaying("Armature|StepDown") && !muelto) // Reemplaza "OtherAnimation" con el nombre de la animación anterior
+        {
+            if (input.x == 0 && input.z == 0)
+            {
+                animations.Play("Armature|Idle");
+            }
+        }
 
         if ((input.x != 0 ^ input.z != 0) && !canMove && canUseMovement)
         {
@@ -105,7 +113,7 @@ public class gridMovement : MonoBehaviour
     }
 
 
-    public async void allowFall()
+    public void allowFall()
     {
         rbPlayer.constraints = RigidbodyConstraints.FreezePositionX
                                | RigidbodyConstraints.FreezePositionZ
@@ -114,21 +122,30 @@ public class gridMovement : MonoBehaviour
                                | RigidbodyConstraints.FreezeRotationZ;
 
         rbPlayer.useGravity = true;
+
+        animations.Play("Armature|Fall");
+
     }
 
 
     private void rotatePlayer()
     {
+
+
         if (speed != 0)
         {
+
             if (input.x == 1)
             {
                 playerTransform.transform.rotation = Quaternion.Euler(0, 90, 0);
+
+                animations.Play("Armature|StepDown");
                 return;
             }
             else if (input.x == -1)
             {
                 playerTransform.transform.rotation = Quaternion.Euler(0, 270, 0);
+                animations.Play("Armature|StepDown");
                 return;
 
             }
@@ -136,12 +153,14 @@ public class gridMovement : MonoBehaviour
             else if (input.z == -1)
             {
                 playerTransform.transform.rotation = Quaternion.Euler(0, 180, 0);
+                animations.Play("Armature|StepDown");
                 return;
 
             }
             else if (input.z == 1)
             {
                 playerTransform.transform.rotation = Quaternion.Euler(0, 360, 0);
+                animations.Play("Armature|StepDown");
                 return;
 
             }

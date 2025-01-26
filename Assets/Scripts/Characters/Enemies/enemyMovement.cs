@@ -1,4 +1,7 @@
+using System.Threading.Tasks;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class enemyMovement : MonoBehaviour
 {
@@ -18,11 +21,13 @@ public class enemyMovement : MonoBehaviour
 
 
 
-    public AudioClip sonidoMuerte;
+    public AudioClip sonidoMuerte, daño;
 
-
+    public AudioSource sonido;
 
     public bool muelto;
+
+    [SerializeField] private Animation animations;
 
     void Start()
     {
@@ -32,6 +37,10 @@ public class enemyMovement : MonoBehaviour
         playerScript = GameObject.Find("sapito").GetComponent<gridMovement>();
 
         rbEnemy = GetComponent<Rigidbody>();
+
+        animations["Armature.001|Idle"].wrapMode = WrapMode.Loop;
+
+        animations.Play("Armature.001|Idle");
     }
 
 
@@ -49,12 +58,23 @@ public class enemyMovement : MonoBehaviour
     {
         GameEvents.OnPlayerMove -= MoveTowardsPlayer;
 
+
+
+    }
+
+
+    private void Update()
+    {
+        if (!animations.IsPlaying("Armature.001|MoveUp"))
+        {
+            animations.Play("Armature.001|Idle");
+
+        }
     }
 
 
     private void MoveTowardsPlayer()
     {
-
         // Obtén la posición objetivo (del jugador)
         targetPosition = playerTransform.position;
 
@@ -74,16 +94,22 @@ public class enemyMovement : MonoBehaviour
             targetPosition.x = transform.position.x; // Mantén la posición X actual
         }
 
-        // int randomDirection = Random.Range(1, 3); // 1 o 2
-        // if (randomDirection == 1)
-        // {
-        //     // Invertir la dirección para alejarse del jugador
-        //     Vector3 directionAway = (transform.position - targetPosition).normalized;
-        //     targetPosition = transform.position + directionAway; // Alejarse en la misma dirección
-        // }
+        // Calcula la dirección del movimiento
+        Vector3 direction = (targetPosition - transform.position).normalized;
 
-        // Mueve el objeto hacia la posición objetivo solo en un eje
+        // Solo rota si hay movimiento
+        if (direction != Vector3.zero)
+        {
+            // Calcula la rotación hacia el eje del movimiento
+            float angle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.Euler(0, angle, 0); // Rotación solo en el eje Y
+        }
+
+        // Mueve el objeto hacia la posición objetivo
         transform.position = Vector3.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
+
+        // Reproduce la animación
+        animations.Play("Armature.001|MoveDownLeftRight");
     }
 
 
@@ -99,7 +125,7 @@ public class enemyMovement : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private async void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("bubble"))
         {
@@ -118,12 +144,16 @@ public class enemyMovement : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             //animacion y sonido de muerte
+            playerScript.muelto = true;
+            playerScript.allowFall();
 
-
-            playerScript.animations.Play("Armature_Fall");
-
-
+            sonido.PlayOneShot(daño);
             Destroy(gameObject);
+
+            await UniTask.Delay(1000);
+
+            int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+            SceneManager.LoadScene(currentSceneIndex);
         }
     }
 
