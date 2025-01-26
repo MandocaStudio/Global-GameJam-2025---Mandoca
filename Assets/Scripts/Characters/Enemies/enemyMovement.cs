@@ -2,6 +2,7 @@ using System.Threading.Tasks;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class enemyMovement : MonoBehaviour
 {
@@ -29,6 +30,19 @@ public class enemyMovement : MonoBehaviour
 
     [SerializeField] private Animation animations;
 
+    [SerializeField] bool isMoving;
+
+
+    [SerializeField] Vector3 center;
+
+
+    private bool isMovingTowardsTarget = false; // Variable para controlar el estado del movimiento
+
+
+    // [SerializeField] Vector3 playerPosition;
+
+
+
     void Start()
     {
 
@@ -49,7 +63,7 @@ public class enemyMovement : MonoBehaviour
         if (!muelto)
         {
             GameEvents.OnPlayerMove += MoveTowardsPlayer;
-
+            isMoving = true;
         }
 
     }
@@ -57,8 +71,6 @@ public class enemyMovement : MonoBehaviour
     private void OnDisable()
     {
         GameEvents.OnPlayerMove -= MoveTowardsPlayer;
-
-
 
     }
 
@@ -73,44 +85,72 @@ public class enemyMovement : MonoBehaviour
     }
 
 
+
     private void MoveTowardsPlayer()
     {
-        // Obtén la posición objetivo (del jugador)
-        targetPosition = playerTransform.position;
+        if (isMovingTowardsTarget) return; // Si ya está en movimiento, no recalcular
 
-        // Calcula las diferencias en los ejes X y Z
-        float distanceX = Mathf.Abs(targetPosition.x - transform.position.x);
-        float distanceZ = Mathf.Abs(targetPosition.z - transform.position.z);
+        // Establece que el enemigo está en movimiento
+        isMovingTowardsTarget = true;
+
+        // Obtén la posición actual del enemigo
+        Vector3 currentPosition = transform.position;
+
+        // Calcula las diferencias en los ejes X y Z respecto al jugador
+        float distanceX = Mathf.Abs(playerTransform.position.x - currentPosition.x);
+        float distanceZ = Mathf.Abs(playerTransform.position.z - currentPosition.z);
 
         // Decide en qué eje moverse (prioriza el eje con mayor distancia)
         if (distanceX > distanceZ)
         {
-            // Mueve en el eje X
-            targetPosition.z = transform.position.z; // Mantén la posición Z actual
+            // Desplaza un paso en el eje X (hacia el jugador)
+            targetPosition = new Vector3(currentPosition.x + Mathf.Sign(playerTransform.position.x - currentPosition.x), currentPosition.y, currentPosition.z);
         }
         else
         {
-            // Mueve en el eje Z
-            targetPosition.x = transform.position.x; // Mantén la posición X actual
+            // Desplaza un paso en el eje Z (hacia el jugador)
+            targetPosition = new Vector3(currentPosition.x, currentPosition.y, currentPosition.z + Mathf.Sign(playerTransform.position.z - currentPosition.z));
         }
 
-        // Calcula la dirección del movimiento
-        Vector3 direction = (targetPosition - transform.position).normalized;
-
-        // Solo rota si hay movimiento
-        if (direction != Vector3.zero)
-        {
-            // Calcula la rotación hacia el eje del movimiento
-            float angle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.Euler(0, angle, 0); // Rotación solo en el eje Y
-        }
-
-        // Mueve el objeto hacia la posición objetivo
-        transform.position = Vector3.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
-
-        // Reproduce la animación
-        animations.Play("Armature.001|MoveDownLeftRight");
+        // Llama a la corrutina para mover al enemigo
+        StartCoroutine(MoveToTarget(targetPosition));
     }
+
+
+    private IEnumerator MoveToTarget(Vector3 target)
+    {
+        // Mueve el objeto hacia la posición objetivo
+        while (Vector3.Distance(transform.position, target) > 0.01f)
+        {
+            // Calcula la dirección del movimiento
+            Vector3 direction = (target - transform.position).normalized;
+
+            // // Solo rota si hay movimiento
+            // if (direction != Vector3.zero)
+            // {
+            //     float angle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg;
+            //     transform.rotation = Quaternion.Euler(0, angle, 0); // Rotación solo en el eje Y
+            // }
+
+            // Mueve hacia el objetivo
+            transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
+
+            // Reproduce la animación
+            animations.Play("Armature.001|MoveDownLeftRight");
+
+            yield return null; // Espera al siguiente frame
+        }
+
+        // Asegúrate de detener en la posición exacta del objetivo
+        transform.position = target;
+
+        // Cambia el estado a "no en movimiento"
+        isMovingTowardsTarget = false;
+
+        // Reproduce la animación de idle al completar el movimiento
+        animations.Play("Armature.001|Idle");
+    }
+
 
 
 
@@ -122,6 +162,10 @@ public class enemyMovement : MonoBehaviour
             bubbleHealth = other.GetComponent<Vida>();
             bubbleHealth.bubbleDamage();
 
+
+
+
+
         }
     }
 
@@ -129,6 +173,11 @@ public class enemyMovement : MonoBehaviour
     {
         if (other.CompareTag("bubble"))
         {
+
+
+            Vector3 center = other.GetComponent<Collider>().bounds.center;
+
+            transform.position = Vector3.MoveTowards(transform.position, center, speed * Time.deltaTime);
 
             bubbleHealth = other.GetComponent<Vida>();
 

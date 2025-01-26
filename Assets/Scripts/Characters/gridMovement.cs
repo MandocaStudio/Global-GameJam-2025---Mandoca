@@ -68,7 +68,6 @@ public class gridMovement : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, movePoint, speed * Time.deltaTime);
 
             // Notifica a los enemigos que el jugador se movió
-            GameEvents.NotifyPlayerMove();
 
             if (Vector3.Distance(transform.position, movePoint) == 0)
             {
@@ -76,7 +75,16 @@ public class gridMovement : MonoBehaviour
 
                 canUseMovement = false;
             }
+
+
+            moving();
+
+
         }
+
+
+
+
 
         if (!animations.IsPlaying("Armature|StepDown") && !muelto) // Reemplaza "OtherAnimation" con el nombre de la animación anterior
         {
@@ -112,6 +120,11 @@ public class gridMovement : MonoBehaviour
         }
     }
 
+    private async void moving()
+    {
+        await UniTask.Delay(700);
+        GameEvents.NotifyPlayerMove();
+    }
 
     public void allowFall()
     {
