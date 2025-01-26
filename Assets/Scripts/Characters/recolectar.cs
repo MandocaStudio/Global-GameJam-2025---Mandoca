@@ -1,21 +1,31 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class recolectar : MonoBehaviour
 {
-    public static int recolectado = 0;
+    public int recolectado;
+
+    [SerializeField] private int NextLevelAmount;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        recolectado = 0;
     }
-    public void OnTriggerEnter(Collider other){
-        if(other.gameObject.tag == "Premio"){
-                recolectar.recolectado++;
-            }
-        }
-    // Update is called once per frame
-    void Update()
+
+
+    public void comprobacion(int valorMoneda)
     {
-        
+        recolectado += valorMoneda;
+        if (recolectado == NextLevelAmount)
+        {
+
+            int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+
+            // Carga la siguiente escena sumando 1 al índice actual
+            SceneManager.LoadScene(currentSceneIndex + 1);
+        }
     }
+
+
+
 }

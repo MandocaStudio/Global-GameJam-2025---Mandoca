@@ -91,7 +91,7 @@ public class Vida : MonoBehaviour
         // }
     }
 
-    public async void destroyBubbleForEnemy(Rigidbody rbEnemy)
+    public async void destroyBubbleForEnemy(Rigidbody rbEnemy, AudioClip sonido)
     {
         await UniTask.Delay(500);
         bubbleVFX.SetActive(true);
@@ -104,6 +104,11 @@ public class Vida : MonoBehaviour
                        | RigidbodyConstraints.FreezeRotationZ;
 
         rbEnemy.useGravity = true;
+
+        AudioSource soundEffects = GameObject.Find("efectos").GetComponent<AudioSource>();
+
+        soundEffects.PlayOneShot(sonido);
+
         Destroy(gameObject);
 
 

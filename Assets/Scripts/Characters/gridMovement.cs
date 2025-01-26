@@ -40,6 +40,7 @@ public class gridMovement : MonoBehaviour
     void Start()
     {
         rbPlayer = GetComponent<Rigidbody>();
+        playerTransform = GetComponent<Transform>();
         movePoint = transform.position;
     }
 

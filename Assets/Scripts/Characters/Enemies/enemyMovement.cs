@@ -18,6 +18,10 @@ public class enemyMovement : MonoBehaviour
 
 
 
+    public AudioClip sonidoMuerte;
+
+
+
     public bool muelto;
 
     void Start()
@@ -119,7 +123,7 @@ public class enemyMovement : MonoBehaviour
             if (bubbleHealth.cantidad_vida == 1)
             {
                 muelto = true;
-                bubbleHealth.destroyBubbleForEnemy(rbEnemy);
+                bubbleHealth.destroyBubbleForEnemy(rbEnemy, sonidoMuerte);
 
             }
 

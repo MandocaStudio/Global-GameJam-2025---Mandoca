@@ -4,17 +4,20 @@ using UnityEngine.UI;
 
 public class FadeController : MonoBehaviour
 {
-    public GameObject fadePanel; 
-    public float fadeInDuration = 1f; 
-    public float fadeOutDuration = 0.5f; 
+    public GameObject fadePanel;
+    public float fadeInDuration = 1f;
+    public float fadeOutDuration = 0.5f;
 
     private Image panelImage;
 
     private void Start()
     {
-        
+
         panelImage = fadePanel.GetComponent<Image>();
         SetPanelAlpha(0);
+
+        StartCoroutine(FadeSequence());
+
     }
 
     private void Update()
@@ -31,7 +34,7 @@ public class FadeController : MonoBehaviour
 
         yield return StartCoroutine(FadeIn());
 
- 
+
         yield return new WaitForSeconds(0.5f);
 
         yield return StartCoroutine(FadeOut());
@@ -44,7 +47,7 @@ public class FadeController : MonoBehaviour
         while (elapsed < fadeInDuration)
         {
             elapsed += Time.deltaTime;
-            float alpha = Mathf.Clamp01(elapsed / fadeInDuration); 
+            float alpha = Mathf.Clamp01(elapsed / fadeInDuration);
             SetPanelAlpha(alpha);
             yield return null;
         }
@@ -59,12 +62,12 @@ public class FadeController : MonoBehaviour
         while (elapsed < fadeOutDuration)
         {
             elapsed += Time.deltaTime;
-            float alpha = Mathf.Clamp01(1 - (elapsed / fadeOutDuration)); 
+            float alpha = Mathf.Clamp01(1 - (elapsed / fadeOutDuration));
             SetPanelAlpha(alpha);
             yield return null;
         }
 
-        SetPanelAlpha(0); 
+        SetPanelAlpha(0);
     }
 
     private void SetPanelAlpha(float alpha)
@@ -72,7 +75,7 @@ public class FadeController : MonoBehaviour
         if (panelImage != null)
         {
             Color color = panelImage.color;
-            color.a = alpha; 
+            color.a = alpha;
             panelImage.color = color;
         }
     }
