@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
 public class gridMovement : MonoBehaviour
 {
 
-
+    public bool muelto;
 
     [SerializeField] public float speed;
 
@@ -32,6 +32,8 @@ public class gridMovement : MonoBehaviour
 
     [SerializeField] private int sceneIndex;
 
+
+
     private Vector3 previousInput; // Para almacenar la entrada previa del jugador
 
 
@@ -44,12 +46,17 @@ public class gridMovement : MonoBehaviour
     // Update is called once per frame
     async Task Update()
     {
+
+
+
+
         input.z = (int)Input.GetAxisRaw("DPadVertical");
         input.x = (int)Input.GetAxisRaw("DPadHorizontal");
 
 
-        if (canMove)
+        if (canMove && !muelto && !Input.GetButton("proyectil"))
         {
+
             transform.position = Vector3.MoveTowards(transform.position, movePoint, speed * Time.deltaTime);
 
             // Notifica a los enemigos que el jugador se movió
@@ -76,6 +83,14 @@ public class gridMovement : MonoBehaviour
         }
 
 
+        if (Input.GetButton("proyectil"))
+        {
+            movePoint = transform.position;
+            rotatePlayer();
+
+        }
+
+
         if (input == Vector3.zero)
         {
             canUseMovement = true;
@@ -94,9 +109,7 @@ public class gridMovement : MonoBehaviour
 
         rbPlayer.useGravity = true;
 
-        await UniTask.Delay(1000);
 
-        SceneManager.LoadScene(sceneIndex);
 
 
     }

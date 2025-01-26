@@ -47,25 +47,32 @@ public class Vida : MonoBehaviour
     }
     private void OnCollisionExit(Collision other)
     {
-        if (other.gameObject.CompareTag("Enemigo") || other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player"))
         {
-            cantidad_vida -= 1;
-            if (cantidad_vida == 2)
-            {
-                objectRenderer.material = color2;
-            }
-            if (cantidad_vida == 1)
-            {
-                objectRenderer.material = color3;
-            }
+            bubbleDamage();
 
         }
 
     }
 
+    public void bubbleDamage()
+    {
+        cantidad_vida -= 1;
+        if (cantidad_vida == 2)
+        {
+            objectRenderer.material = color2;
+        }
+        if (cantidad_vida == 1)
+        {
+            objectRenderer.material = color3;
+        }
+    }
+
+
+
     private async UniTask OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("Enemigo"))
+        if (other.gameObject.CompareTag("Player"))
         {
             if (cantidad_vida == 1)
             {
@@ -73,12 +80,25 @@ public class Vida : MonoBehaviour
                 await destroyBubble(playerScript);
             }
         }
+
+        if (other.gameObject.CompareTag("Enemigo"))
+        {
+            if (cantidad_vida == 1)
+            {
+                enemyMovement enemyScript = other.collider.GetComponent<enemyMovement>();
+                enemyScript.muelto = true;
+            }
+        }
     }
+
+
 
     private async UniTask destroyBubble(gridMovement Player)
     {
         await UniTask.Delay(500);
-        Player.speed = 0;
+        Player.muelto = true;
+
+        //Player.speed = 0;
         bubbleVFX.SetActive(true);
 
         bubbleMeshRenderer.enabled = false;

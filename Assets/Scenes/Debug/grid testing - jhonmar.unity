@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 12455277}
   m_Layer: 0
   m_Name: piso (22)
-  m_TagString: Player
+  m_TagString: bubble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -273,7 +273,7 @@ GameObject:
   - component: {fileID: 71364058}
   m_Layer: 0
   m_Name: piso (14)
-  m_TagString: Player
+  m_TagString: bubble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -533,7 +533,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: -0.24, z: 0}
 --- !u!23 &115511056
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -616,8 +616,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 0}
+  playerScript: {fileID: 0}
   speed: 2
   targetPosition: {x: 0, y: 0, z: 0}
+  bubbleHealth: {fileID: 0}
+  muelto: 0
 --- !u!1001 &126088327
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -867,7 +870,7 @@ GameObject:
   - component: {fileID: 176474246}
   m_Layer: 0
   m_Name: piso (31)
-  m_TagString: Player
+  m_TagString: bubble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -996,7 +999,7 @@ GameObject:
   - component: {fileID: 193242591}
   m_Layer: 0
   m_Name: piso (33)
-  m_TagString: Player
+  m_TagString: bubble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1198,7 +1201,7 @@ GameObject:
   - component: {fileID: 208979417}
   m_Layer: 0
   m_Name: piso (12)
-  m_TagString: Player
+  m_TagString: bubble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1327,7 +1330,7 @@ GameObject:
   - component: {fileID: 215052105}
   m_Layer: 0
   m_Name: piso (7)
-  m_TagString: Player
+  m_TagString: bubble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1602,7 +1605,7 @@ GameObject:
   - component: {fileID: 261959057}
   m_Layer: 0
   m_Name: piso (15)
-  m_TagString: Player
+  m_TagString: bubble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1736,7 +1739,7 @@ GameObject:
   - component: {fileID: 272634788}
   m_Layer: 0
   m_Name: piso (19)
-  m_TagString: Player
+  m_TagString: bubble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1938,7 +1941,7 @@ GameObject:
   - component: {fileID: 311962428}
   m_Layer: 0
   m_Name: piso (11)
-  m_TagString: Player
+  m_TagString: bubble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2067,7 +2070,7 @@ GameObject:
   - component: {fileID: 314145268}
   m_Layer: 0
   m_Name: piso (35)
-  m_TagString: Player
+  m_TagString: bubble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2181,6 +2184,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 314145266}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &329064659
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 329064660}
+  m_Layer: 0
+  m_Name: proyectilContainer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &329064660
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 329064659}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 2.07}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 625928482}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &353736512
 GameObject:
   m_ObjectHideFlags: 0
@@ -2196,7 +2230,7 @@ GameObject:
   - component: {fileID: 353736514}
   m_Layer: 0
   m_Name: piso (42)
-  m_TagString: Player
+  m_TagString: bubble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2612,7 +2646,7 @@ GameObject:
   - component: {fileID: 464867210}
   m_Layer: 0
   m_Name: piso (4)
-  m_TagString: Player
+  m_TagString: bubble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2819,7 +2853,7 @@ GameObject:
   - component: {fileID: 480829124}
   m_Layer: 0
   m_Name: piso (44)
-  m_TagString: Player
+  m_TagString: bubble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3073,7 +3107,7 @@ GameObject:
   - component: {fileID: 528357189}
   m_Layer: 0
   m_Name: piso (17)
-  m_TagString: Player
+  m_TagString: bubble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3285,7 +3319,7 @@ GameObject:
   - component: {fileID: 588272042}
   m_Layer: 0
   m_Name: piso (39)
-  m_TagString: Player
+  m_TagString: bubble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3477,6 +3511,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
+--- !u!4 &625928482 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6866899050069475257, guid: aa1aad697cc738e4f9550293c979f9c6, type: 3}
+  m_PrefabInstance: {fileID: 23311699965852125}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &633469391 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4962161428340177833, guid: 890151eba7279a343b79d2f0119c4059, type: 3}
@@ -3570,7 +3609,7 @@ GameObject:
   - component: {fileID: 677252915}
   m_Layer: 0
   m_Name: piso (30)
-  m_TagString: Player
+  m_TagString: bubble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3772,7 +3811,7 @@ GameObject:
   - component: {fileID: 709767050}
   m_Layer: 0
   m_Name: piso (29)
-  m_TagString: Player
+  m_TagString: bubble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3906,7 +3945,7 @@ GameObject:
   - component: {fileID: 732350411}
   m_Layer: 0
   m_Name: piso (36)
-  m_TagString: Player
+  m_TagString: bubble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4191,7 +4230,7 @@ GameObject:
   - component: {fileID: 809824424}
   m_Layer: 0
   m_Name: piso (3)
-  m_TagString: Player
+  m_TagString: bubble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4398,7 +4437,7 @@ GameObject:
   - component: {fileID: 870157165}
   m_Layer: 0
   m_Name: piso (32)
-  m_TagString: Player
+  m_TagString: bubble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4678,7 +4717,7 @@ GameObject:
   - component: {fileID: 961871248}
   m_Layer: 0
   m_Name: piso (9)
-  m_TagString: Player
+  m_TagString: bubble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4807,7 +4846,7 @@ GameObject:
   - component: {fileID: 982111330}
   m_Layer: 0
   m_Name: piso (18)
-  m_TagString: Player
+  m_TagString: bubble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4936,7 +4975,7 @@ GameObject:
   - component: {fileID: 1006374741}
   m_Layer: 0
   m_Name: piso (24)
-  m_TagString: Player
+  m_TagString: bubble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5211,7 +5250,7 @@ GameObject:
   - component: {fileID: 1037488823}
   m_Layer: 0
   m_Name: piso (21)
-  m_TagString: Player
+  m_TagString: bubble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5340,7 +5379,7 @@ GameObject:
   - component: {fileID: 1065884510}
   m_Layer: 0
   m_Name: piso (23)
-  m_TagString: Player
+  m_TagString: bubble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5474,7 +5513,7 @@ GameObject:
   - component: {fileID: 1156323656}
   m_Layer: 0
   m_Name: piso (45)
-  m_TagString: Player
+  m_TagString: bubble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5603,7 +5642,7 @@ GameObject:
   - component: {fileID: 1164988107}
   m_Layer: 0
   m_Name: piso (13)
-  m_TagString: Player
+  m_TagString: bubble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5807,7 +5846,7 @@ GameObject:
   - component: {fileID: 1198902421}
   m_Layer: 0
   m_Name: piso (37)
-  m_TagString: Player
+  m_TagString: bubble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5941,7 +5980,7 @@ GameObject:
   - component: {fileID: 1217628546}
   m_Layer: 0
   m_Name: piso (20)
-  m_TagString: Player
+  m_TagString: bubble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6143,7 +6182,7 @@ GameObject:
   - component: {fileID: 1240560784}
   m_Layer: 0
   m_Name: piso (10)
-  m_TagString: Player
+  m_TagString: bubble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6272,7 +6311,7 @@ GameObject:
   - component: {fileID: 1274143373}
   m_Layer: 0
   m_Name: piso (46)
-  m_TagString: Player
+  m_TagString: bubble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6479,7 +6518,7 @@ GameObject:
   - component: {fileID: 1313222489}
   m_Layer: 0
   m_Name: piso (6)
-  m_TagString: Player
+  m_TagString: bubble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6608,7 +6647,7 @@ GameObject:
   - component: {fileID: 1344795674}
   m_Layer: 0
   m_Name: piso
-  m_TagString: Player
+  m_TagString: bubble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6737,7 +6776,7 @@ GameObject:
   - component: {fileID: 1348473758}
   m_Layer: 0
   m_Name: piso (2)
-  m_TagString: Player
+  m_TagString: bubble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7027,7 +7066,7 @@ GameObject:
   - component: {fileID: 1405566955}
   m_Layer: 0
   m_Name: piso (47)
-  m_TagString: Player
+  m_TagString: bubble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7156,7 +7195,7 @@ GameObject:
   - component: {fileID: 1410032881}
   m_Layer: 0
   m_Name: piso (43)
-  m_TagString: Player
+  m_TagString: bubble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7987,7 +8026,7 @@ GameObject:
   - component: {fileID: 1567584845}
   m_Layer: 0
   m_Name: piso (1)
-  m_TagString: Player
+  m_TagString: bubble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8335,7 +8374,7 @@ GameObject:
   - component: {fileID: 1606639232}
   m_Layer: 0
   m_Name: piso (8)
-  m_TagString: Player
+  m_TagString: bubble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8547,7 +8586,7 @@ GameObject:
   - component: {fileID: 1703713955}
   m_Layer: 0
   m_Name: piso (16)
-  m_TagString: Player
+  m_TagString: bubble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8676,7 +8715,7 @@ GameObject:
   - component: {fileID: 1710561703}
   m_Layer: 0
   m_Name: piso (5)
-  m_TagString: Player
+  m_TagString: bubble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8883,7 +8922,7 @@ GameObject:
   - component: {fileID: 1722640493}
   m_Layer: 0
   m_Name: piso (41)
-  m_TagString: Player
+  m_TagString: bubble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9012,7 +9051,7 @@ GameObject:
   - component: {fileID: 1724018761}
   m_Layer: 0
   m_Name: piso (40)
-  m_TagString: Player
+  m_TagString: bubble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9375,7 +9414,7 @@ GameObject:
   - component: {fileID: 1835359603}
   m_Layer: 0
   m_Name: piso (34)
-  m_TagString: Player
+  m_TagString: bubble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9504,7 +9543,7 @@ GameObject:
   - component: {fileID: 1845149799}
   m_Layer: 0
   m_Name: piso (28)
-  m_TagString: Player
+  m_TagString: bubble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9633,7 +9672,7 @@ GameObject:
   - component: {fileID: 1850229546}
   m_Layer: 0
   m_Name: piso (27)
-  m_TagString: Player
+  m_TagString: bubble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10264,7 +10303,7 @@ GameObject:
   - component: {fileID: 2056405872}
   m_Layer: 0
   m_Name: piso (26)
-  m_TagString: Player
+  m_TagString: bubble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10559,7 +10598,7 @@ GameObject:
   - component: {fileID: 2119838205}
   m_Layer: 0
   m_Name: piso (38)
-  m_TagString: Player
+  m_TagString: bubble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10688,7 +10727,7 @@ GameObject:
   - component: {fileID: 2124973190}
   m_Layer: 0
   m_Name: piso (25)
-  m_TagString: Player
+  m_TagString: bubble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10939,7 +10978,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 6866899050069475257, guid: aa1aad697cc738e4f9550293c979f9c6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 329064660}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa1aad697cc738e4f9550293c979f9c6, type: 3}
 --- !u!1660057539 &9223372036854775807
