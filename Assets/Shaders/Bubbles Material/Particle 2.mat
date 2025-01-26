@@ -188,3 +188,4 @@ Material:
     - _VerticalNoiseAnimation: {r: 0, g: 5, b: 2, a: 0}
     - _VerticalNoiseColour: {r: 16, g: 3.367514, b: 1.2578583, a: 1}
   m_BuildTextureStacks: []
+  m_AllowLocking: 1

@@ -32,6 +32,8 @@ public class gridMovement : MonoBehaviour
 
     [SerializeField] private int sceneIndex;
 
+    public Animation animations;
+
 
 
     private Vector3 previousInput; // Para almacenar la entrada previa del jugador
@@ -42,10 +44,13 @@ public class gridMovement : MonoBehaviour
         rbPlayer = GetComponent<Rigidbody>();
         playerTransform = GetComponent<Transform>();
         movePoint = transform.position;
+
+
+        animations.Play("Armature|Idle");
     }
 
     // Update is called once per frame
-    async Task Update()
+    void Update()
     {
 
 
@@ -100,7 +105,7 @@ public class gridMovement : MonoBehaviour
     }
 
 
-    public async UniTask allowFall()
+    public async void allowFall()
     {
         rbPlayer.constraints = RigidbodyConstraints.FreezePositionX
                                | RigidbodyConstraints.FreezePositionZ

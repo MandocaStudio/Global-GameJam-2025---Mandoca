@@ -51,21 +51,7 @@ public class enemyMovement : MonoBehaviour
 
     }
 
-    // private void Update()
-    // {
-    //     if (muelto)
-    //     {
-    //         rbEnemy.constraints = RigidbodyConstraints.FreezePositionX
-    //                                | RigidbodyConstraints.FreezePositionZ
-    //                                | RigidbodyConstraints.FreezeRotationX
-    //                                | RigidbodyConstraints.FreezeRotationY
-    //                                | RigidbodyConstraints.FreezeRotationZ;
 
-    //         rbEnemy.useGravity = true;
-    //     }
-    // }
-
-    // Update is called once per frame
     private void MoveTowardsPlayer()
     {
 
@@ -127,6 +113,17 @@ public class enemyMovement : MonoBehaviour
 
             }
 
+        }
+
+        if (other.CompareTag("Player"))
+        {
+            //animacion y sonido de muerte
+
+
+            playerScript.animations.Play("Armature_Fall");
+
+
+            Destroy(gameObject);
         }
     }
 
