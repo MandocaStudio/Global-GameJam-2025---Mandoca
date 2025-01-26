@@ -30,7 +30,16 @@ public class enemyMovement : MonoBehaviour
     // Update is called once per frame
     private void MoveTowardsPlayer()
     {
-        targetPosition = transform.position + Vector3.forward;
+
+        targetPosition = playerTransform.transform.position;
+
+        int randomRange = Random.Range(0, 3);
+
+        if (randomRange == 1)
+        {
+
+        }
+
         transform.position = Vector3.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
     }
 
