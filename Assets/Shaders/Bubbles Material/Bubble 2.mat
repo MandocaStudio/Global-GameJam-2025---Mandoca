@@ -175,7 +175,7 @@ Material:
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _DepthHighlightColour: {r: 1.9352448, g: 5.686642, b: 5.4869075, a: 1}
+    - _DepthHighlightColour: {r: 0.0302382, g: 0.088853784, b: 0.08573293, a: 1}
     - _DepthNoiseAnimation: {r: 0, g: 1, b: 0, a: 5}
     - _DepthNoiseColour: {r: 0, g: 13.769043, b: 32, a: 0.101960786}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
