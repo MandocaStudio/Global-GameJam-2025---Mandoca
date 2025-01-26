@@ -8,25 +8,18 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Proyectil Unico 3
-  m_Shader: {fileID: 4800000, guid: 0406db5a14f94604a8c57ccfbc9f3b46, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 7f67cd1a353fe5b42af39a14b76f7dd5, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords:
-  - _EMISSION
-  - _FADING_ON
-  - _SOFTPARTICLES_ON
-  - _SURFACE_TYPE_TRANSPARENT
-  m_InvalidKeywords:
-  - _FLIPBOOKBLENDING_OFF
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
   m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 1
-  m_CustomRenderQueue: 3000
-  stringTagMap:
-    RenderType: Transparent
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
   disabledShaderPasses:
-  - SHADOWCASTER
-  - DepthOnly
+  - MOTIONVECTORS
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
@@ -41,6 +34,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _ColorRamp:
         m_Texture: {fileID: 2800000, guid: d886c0cb73a19514a8be80f38031dd73, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Cubemap:
+        m_Texture: {fileID: 8900000, guid: 9479a28f6274616499b25b9e7fbabdcc, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -91,9 +88,26 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Texture2D:
+        m_Texture: {fileID: 2800000, guid: 1b8789a6ddaba5740ba9d8ef7d1fb405, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
     - _AlphaClip: 0
+    - _AlphaCutoff: 0.5
     - _AlphaToMask: 0
     - _Blend: 2
     - _BlendOp: 0
@@ -103,8 +117,15 @@ Material:
     - _CameraNearFadeDistance: 1
     - _ColorMode: 0
     - _ColorMultiplier: 1.5
+    - _Colour_Power: 2
+    - _Colour_Power_Remap_Max: 1
+    - _Colour_Power_Remap_Min: 0
     - _Cull: 0
     - _Cutoff: 0.5
+    - _DepthFade: 0.2
+    - _DepthHighlightPower: 1
+    - _DepthNoisePower: 2
+    - _DepthNoiseScale: 8
     - _DetailNormalMapScale: 1
     - _DistortMainTexture: 0
     - _DistortionBlend: 0.5
@@ -118,23 +139,52 @@ Material:
     - _DstBlendAlpha: 1
     - _EdgeSoftness: 0
     - _FaceSignClamp: 1
+    - _Falloff: 1
     - _FlipbookBlending: 0
     - _FlipbookMode: 0
+    - _Fresnel2Power: 2
+    - _Fresnel2RemapMax: 1
+    - _Fresnel2RemapMin: 0
+    - _FresnelPower: 2
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _GradientPower: 0
     - _GradientUSpeed: 0
     - _GradientVSpeed: 0
+    - _GridColourPower: 1
+    - _GridColourRemapMax: 1
+    - _GridColourRemapMin: 0
+    - _GridNoiseNormalScale: 0.2
+    - _GridOpacity: 1
+    - _GridScale: 32
+    - _GridThicknessPower: 1
+    - _GridWidth: 0.6866767
     - _InvFade: 1
+    - _LOD: 0
     - _MainTextureUSpeed: 0
     - _MainTextureVSpeed: 0
     - _Metallic: 0
     - _Mode: 0
     - _NoiseAmount: 0
+    - _NoiseNormalBlend: 0.1
+    - _NoiseNormalScale: 1
+    - _NoiseScale: 1
+    - _NoiseTwist: 0
+    - _NoiseVertexOffset: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
+    - _Power: 8
+    - _QuantizeSceneUVs: 32
+    - _QueueControl: 0
     - _QueueOffset: 0
+    - _RGBSplit: 0.1
+    - _RGBSplitSteps: 1
+    - _Radius: 0.5
+    - _Radius_Scale: 1
+    - _ReceiveShadows: 1
+    - _ReflectionProbes: 0
+    - _ReflectionProbesLOD: 0
     - _SampleGI: 0
     - _SmoothnessTextureChannel: 0
     - _SoftParticlesEnabled: 1
@@ -145,16 +195,39 @@ Material:
     - _SrcBlend: 5
     - _SrcBlendAlpha: 1
     - _Surface: 1
+    - _TessPhongStrength: 0.5
+    - _TessValue: 16
+    - _Thickness: 0.1
     - _UVSec: 0
+    - _VerticalHighlightPower: 1
+    - _VerticalNoiseMaskPower: 1
+    - _VerticalNoisePower: 1
+    - _VerticalNoiseScale: 1
+    - _VerticalNoiseTwist: 3.8
     - _ZWrite: 0
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _BaseColorAddSubDiff: {r: 0, g: 0, b: 0, a: 0}
     - _CameraFadeParams: {r: 0, g: Infinity, b: 0, a: 0}
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 1, g: 0, b: 0, a: 1}
+    - _Colour: {r: 1, g: 1, b: 1, a: 1}
+    - _Colour_2: {r: 1, g: 1, b: 1, a: 1}
+    - _DepthHighlightColour: {r: 1, g: 1, b: 1, a: 1}
+    - _DepthNoiseAnimation: {r: 0, g: 0, b: 0, a: 0}
+    - _DepthNoiseColour: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0.033104762, g: 0.033104762, b: 0.033104762, a: 1}
+    - _Fresnel2Colour: {r: 1, g: 1, b: 1, a: 1}
+    - _FresnelColour: {r: 1, g: 1, b: 1, a: 1}
+    - _GridColour: {r: 1, g: 1, b: 1, a: 1}
+    - _GridColour2: {r: 1, g: 1, b: 1, a: 1}
+    - _NoiseAnimation: {r: 0, g: 0, b: 0, a: 0}
+    - _Position: {r: 0, g: 0, b: 0, a: 0}
     - _SoftParticleFadeParams: {r: 0, g: 2.857143, b: 0, a: 0}
+    - _Tiling: {r: 1, g: 1, b: 1, a: 0}
     - _TintColor: {r: 1, g: 1, b: 1, a: 1}
+    - _VerticalHighlightColour: {r: 1, g: 1, b: 1, a: 1}
+    - _VerticalNoiseAnimation: {r: 0, g: 0, b: 0, a: 0}
+    - _VerticalNoiseColour: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &4998574320687721195
