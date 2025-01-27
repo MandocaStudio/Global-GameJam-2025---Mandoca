@@ -167,7 +167,7 @@ public class enemyMovement : MonoBehaviour
         {
 
             bubbleHealth = other.GetComponent<Vida>();
-            bubbleHealth.bubbleDamage();
+            bubbleHealth.bubbleDamage(false);
 
 
 
@@ -192,8 +192,30 @@ public class enemyMovement : MonoBehaviour
             {
                 muelto = true;
                 bubbleHealth.destroyBubbleForEnemy(rbEnemy, sonidoMuerte);
+                await UniTask.Delay(2000);
+
+
+
+                GameEvents.NotifyEnemyDeath();
+
+
+                Destroy(gameObject);
+            }
+            else if (bubbleHealth.cantidad_vida == 0)
+            {
+                muelto = true;
+                bubbleHealth.destroyBubbleForEnemy(rbEnemy, sonidoMuerte);
+
+                await UniTask.Delay(2000);
+
+                GameEvents.NotifyEnemyDeath();
+
+                Destroy(gameObject);
+
 
             }
+
+
 
         }
 
@@ -210,7 +232,9 @@ public class enemyMovement : MonoBehaviour
 
             int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
             SceneManager.LoadScene(currentSceneIndex);
+
         }
+
     }
 
 

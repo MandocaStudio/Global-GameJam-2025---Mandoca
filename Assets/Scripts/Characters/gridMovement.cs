@@ -38,6 +38,9 @@ public class gridMovement : MonoBehaviour
     private Vector3 previousInput; // Para almacenar la entrada previa del jugador
 
 
+    [SerializeField] float enemiesDeath, maxEnemiesPerLvl;
+
+
 
     void Start()
     {
@@ -56,11 +59,18 @@ public class gridMovement : MonoBehaviour
     private void OnEnable()
     {
         GameEvents.OnEnemyMove += PlayerCanMove;
+        GameEvents.OnEnemyDeath += enemiesDeathFunction;
+
     }
 
     private void PlayerCanMove()
     {
         enemyMoving = false;
+    }
+
+    private void enemiesDeathFunction()
+    {
+        enemiesDeath += 1;
     }
 
 
@@ -104,7 +114,7 @@ public class gridMovement : MonoBehaviour
             }
         }
 
-        if ((input.x != 0 ^ input.z != 0) && !canMove && canUseMovement && !enemyMoving)
+        if ((input.x != 0 ^ input.z != 0) && !canMove && canUseMovement && (!enemyMoving || enemiesDeath == maxEnemiesPerLvl))
         {
             rotatePlayer();
             canMove = true;
@@ -132,7 +142,13 @@ public class gridMovement : MonoBehaviour
 
     private async void moving()
     {
-        enemyMoving = true;
+
+        if (enemiesDeath != maxEnemiesPerLvl)
+        {
+            enemyMoving = true;
+
+        }
+
         await UniTask.Delay(700);
         GameEvents.NotifyPlayerMove();
     }

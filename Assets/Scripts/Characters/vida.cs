@@ -17,6 +17,9 @@ public class Vida : MonoBehaviour
 
     [SerializeField] AudioSource sonidos;
 
+    [SerializeField] AudioSource sonidosBurbuja;
+
+
     [SerializeField] BoxCollider Collider;
 
 
@@ -51,6 +54,8 @@ public class Vida : MonoBehaviour
 
         Collider = GetComponent<BoxCollider>();
 
+
+
     }
 
     // Update is called once per frame
@@ -62,31 +67,38 @@ public class Vida : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            bubbleDamage();
+            bubbleDamage(true);
 
         }
 
     }
 
-    public void bubbleDamage()
+    public void bubbleDamage(bool soundEffect)
     {
         cantidad_vida -= 1;
         if (cantidad_vida == 2)
         {
             objectRenderer.material = color2;
+            if (soundEffect)
+            {
+                sonidosBurbuja.PlayOneShot(amarillo);
 
-            sonidos.PlayOneShot(amarillo);
+            }
         }
         if (cantidad_vida == 1)
         {
             objectRenderer.material = color3;
-            sonidos.PlayOneShot(rojo);
+
+            if (soundEffect)
+            {
+                sonidosBurbuja.PlayOneShot(rojo);
+
+
+            }
 
 
         }
     }
-
-
 
     private void OnCollisionEnter(Collision other)
     {
@@ -94,8 +106,16 @@ public class Vida : MonoBehaviour
         {
             if (cantidad_vida == 1)
             {
+
                 gridMovement playerScript = other.collider.GetComponent<gridMovement>();
                 destroyBubbleForPlayer(playerScript);
+            }
+
+            if (cantidad_vida == 0)
+            {
+                gridMovement playerScript = other.collider.GetComponent<gridMovement>();
+                destroyBubbleForPlayer(playerScript);
+
             }
         }
 
@@ -104,10 +124,13 @@ public class Vida : MonoBehaviour
         //     if (cantidad_vida == 1)
         //     {
         //         enemyMovement enemyScript = other.collider.GetComponent<enemyMovement>();
-        //         destroyBubbleForEnemy(enemyScript);
+
+
         //     }
         // }
     }
+
+
 
     public async void destroyBubbleForEnemy(Rigidbody rbEnemy, AudioClip sonido)
     {
@@ -130,24 +153,34 @@ public class Vida : MonoBehaviour
 
         soundEffects.PlayOneShot(sonido);
 
-        Collider.isTrigger = true;
+        objectRenderer.enabled = false;
+
+        // Collider.isTrigger = true;
+
 
 
     }
 
     private async void destroyBubbleForPlayer(gridMovement Player)
     {
+
         await UniTask.Delay(500);
+
         Player.muelto = true;
 
         //Player.speed = 0;
-        bubbleVFX.SetActive(true);
-        sonidos.PlayOneShot(rojoRojito);
+        if (cantidad_vida == 0)
+        {
+            bubbleVFX.SetActive(true);
+
+        }
+
+        sonidosBurbuja.PlayOneShot(rojoRojito);
+
 
 
         bubbleMeshRenderer.enabled = false;
 
-        await UniTask.Delay(1000);
 
         Player.allowFall();
 
