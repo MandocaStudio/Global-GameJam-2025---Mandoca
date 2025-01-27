@@ -873,8 +873,8 @@ PlayerSettings:
   editorAssembliesCompatibilityLevel: 1
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: Global GameJam 2025 - Mandoca
-  metroPackageVersion: 
+  metroPackageName: GlobalGameJam2025-Mandoca
+  metroPackageVersion: 1.0.0.0
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
@@ -882,7 +882,7 @@ PlayerSettings:
   metroCertificateNotAfter: 0000000000000000
   metroApplicationDescription: Global GameJam 2025 - Mandoca
   wsaImages: {}
-  metroTileShortName: 
+  metroTileShortName: Global GameJam 2025 - Mandoca
   metroTileShowName: 0
   metroMediumTileShowName: 0
   metroLargeTileShowName: 0
