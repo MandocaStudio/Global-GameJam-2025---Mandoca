@@ -60,8 +60,10 @@ public class enemyMovement : MonoBehaviour
 
     private void OnEnable()
     {
+
         if (!muelto)
         {
+
             GameEvents.OnPlayerMove += MoveTowardsPlayer;
             isMoving = true;
         }
@@ -70,6 +72,7 @@ public class enemyMovement : MonoBehaviour
 
     private void OnDisable()
     {
+
         GameEvents.OnPlayerMove -= MoveTowardsPlayer;
 
     }
@@ -149,6 +152,10 @@ public class enemyMovement : MonoBehaviour
 
         // Reproduce la animación de idle al completar el movimiento
         animations.Play("Armature.001|Idle");
+
+
+        GameEvents.NotifyEnemyMove();
+
     }
 
 

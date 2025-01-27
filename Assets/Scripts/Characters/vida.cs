@@ -17,6 +17,8 @@ public class Vida : MonoBehaviour
 
     [SerializeField] AudioSource sonidos;
 
+    [SerializeField] BoxCollider Collider;
+
 
 
 
@@ -46,6 +48,8 @@ public class Vida : MonoBehaviour
         bubbleVFX = transform.GetChild(0).gameObject;
 
         bubbleVFX.SetActive(false);
+
+        Collider = GetComponent<BoxCollider>();
 
     }
 
@@ -126,7 +130,7 @@ public class Vida : MonoBehaviour
 
         soundEffects.PlayOneShot(sonido);
 
-        Destroy(gameObject);
+        Collider.isTrigger = true;
 
 
     }

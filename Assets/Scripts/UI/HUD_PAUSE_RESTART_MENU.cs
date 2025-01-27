@@ -18,19 +18,19 @@ public class PausePanel : MonoBehaviour
     void Update()
     {
         // Detectar botón de Pausa (Start en Xbox y PlayStation)
-        if (Input.GetKeyDown(KeyCode.JoystickButton7) || Input.GetKeyDown(KeyCode.JoystickButton9))
+        if (Input.GetButtonDown("menu"))
         {
             PauseOrResumeGame();
         }
 
         // Detectar botón de Reinicio (Y / Triángulo)
-        if (Input.GetKeyDown(KeyCode.JoystickButton3))
+        if (Input.GetButtonDown("restart"))
         {
             RestartCurrentScene();
         }
 
         // Detectar botón de Salir (B / Círculo)
-        if (Input.GetKeyDown(KeyCode.JoystickButton1))
+        if (Input.GetButtonDown("exit"))
         {
             LoadMainMenu();
         }

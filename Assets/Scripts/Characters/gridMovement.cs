@@ -34,9 +34,9 @@ public class gridMovement : MonoBehaviour
 
     public Animation animations;
 
-
-
+    [SerializeField] private bool enemyMoving;
     private Vector3 previousInput; // Para almacenar la entrada previa del jugador
+
 
 
     void Start()
@@ -49,13 +49,23 @@ public class gridMovement : MonoBehaviour
 
 
         animations.Play("Armature|Idle");
+
+
     }
 
-    // Update is called once per frame
+    private void OnEnable()
+    {
+        GameEvents.OnEnemyMove += PlayerCanMove;
+    }
+
+    private void PlayerCanMove()
+    {
+        enemyMoving = false;
+    }
+
+
     void Update()
     {
-
-
 
 
         input.z = (int)Input.GetAxisRaw("DPadVertical");
@@ -94,7 +104,7 @@ public class gridMovement : MonoBehaviour
             }
         }
 
-        if ((input.x != 0 ^ input.z != 0) && !canMove && canUseMovement)
+        if ((input.x != 0 ^ input.z != 0) && !canMove && canUseMovement && !enemyMoving)
         {
             rotatePlayer();
             canMove = true;
@@ -122,6 +132,7 @@ public class gridMovement : MonoBehaviour
 
     private async void moving()
     {
+        enemyMoving = true;
         await UniTask.Delay(700);
         GameEvents.NotifyPlayerMove();
     }
