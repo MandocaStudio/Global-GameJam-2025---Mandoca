@@ -114,7 +114,7 @@ public class gridMovement : MonoBehaviour
             }
         }
 
-        if ((input.x != 0 ^ input.z != 0) && !canMove && canUseMovement && (!enemyMoving || enemiesDeath == maxEnemiesPerLvl))
+        if ((input.x != 0 ^ input.z != 0) && !canMove && canUseMovement && !muelto && (!enemyMoving || enemiesDeath == maxEnemiesPerLvl))
         {
             rotatePlayer();
             canMove = true;
