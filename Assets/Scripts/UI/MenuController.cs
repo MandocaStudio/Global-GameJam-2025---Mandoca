@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class MainMenuController : MonoBehaviour
 {
     public Canvas optionsCanvas; // Asigna el OptionsCanvas desde el Inspector
-
+    public Canvas CreditCanvas; // Asigna el OptionsCanvas desde el Inspector
     // Método para el botón "Play"
     public void PlayGame(int sceneIndex)
     {
@@ -19,7 +19,12 @@ public class MainMenuController : MonoBehaviour
         // Activar el Canvas de Opciones
         optionsCanvas.gameObject.SetActive(true);
     }
-
+// Método para el botón "Options"
+    public void ShowCredits()
+    {
+        // Activar el Canvas de Opciones
+        CreditCanvas.gameObject.SetActive(true);
+    }
     // Método para cerrar el Panel de Opciones
     public void CloseOptions()
     {
