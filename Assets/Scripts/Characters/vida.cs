@@ -141,6 +141,10 @@ public class Vida : MonoBehaviour
         bubbleVFX.SetActive(true);
         bubbleMeshRenderer.enabled = false;
 
+        Animation animations = rbEnemy.GetComponent<Animation>();
+
+        animations.Play("Armature.001|MoveDownLeftRight"); // aqui
+
         rbEnemy.constraints = RigidbodyConstraints.FreezePositionX
                        | RigidbodyConstraints.FreezePositionZ
                        | RigidbodyConstraints.FreezeRotationX
