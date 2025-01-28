@@ -13,8 +13,13 @@ public class PersistentAudio : MonoBehaviour
         // Si ya existe una instancia, destruye este objeto
         if (instance != null && instance != this)
         {
-            Destroy(gameObject);
-            return;
+            // Comprobar si los nombres son diferentes
+            if (gameObject.name == instance.gameObject.name)
+            {
+                // Si el nombre es diferente, mantenemos el objeto actual y destruimos el otro
+                Destroy(gameObject);
+                return;
+            }
         }
 
         // Marca esta instancia como única y no destruir al cargar nueva escena
