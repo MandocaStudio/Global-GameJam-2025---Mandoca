@@ -90,13 +90,13 @@ AudioMixerController:
   m_UpdateMode: 0
   m_ExposedParameters:
   - guid: ea07c8b1a89829a48a731d710559c310
-    name: MyExposedParam
+    name: VolMaster
   - guid: 697425412b277554a91ae02313173406
     name: MyExposedParam 2
   - guid: 3260a6b76aa614142b871679042efa86
     name: MyExposedParam 3
   - guid: e2870f0212d9fd94c8e5d58fac61b9f3
-    name: VolMaster
+    name: XD
   m_AudioMixerGroupViews:
   - guids:
     - e4bf474fd993c7645afbb038e365a915
