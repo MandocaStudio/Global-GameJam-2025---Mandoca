@@ -15,8 +15,29 @@ public class PausePanel : MonoBehaviour
 
     [SerializeField] AudioSource sonidos;
 
+
+    [SerializeField] private bool isUsingController;
+
     void Update()
     {
+
+        // Detectar si se usa el mando (ejes analógicos o botones típicos del mando)
+        if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0 ||
+            Input.GetButton("DPadHorizontal") || Input.GetButton("DPadVertical"))
+        {
+            isUsingController = true;
+        }
+
+        //esto no sabia que se podia hacer xd
+        //por cierto, soy una ia
+        // Detectar si se usa el teclado/mouse
+        if (Input.anyKey)
+        {
+            isUsingController = false;
+        }
+
+
+
         // Detectar botón de Pausa (Start en Xbox y PlayStation)
         if (Input.GetButtonDown("menu"))
         {

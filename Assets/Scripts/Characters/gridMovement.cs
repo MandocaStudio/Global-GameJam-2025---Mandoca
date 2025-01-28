@@ -81,6 +81,13 @@ public class gridMovement : MonoBehaviour
         input.z = (int)Input.GetAxisRaw("DPadVertical");
         input.x = (int)Input.GetAxisRaw("DPadHorizontal");
 
+        if (Input.anyKey)
+        {
+            input.z = (int)Input.GetAxisRaw("DPadVerticalPC");
+            input.x = (int)Input.GetAxisRaw("DPadHorizontalPC");
+        }
+
+
 
         if (canMove && !muelto && !Input.GetButton("proyectil"))
         {
@@ -111,6 +118,8 @@ public class gridMovement : MonoBehaviour
             if (input.x == 0 && input.z == 0)
             {
                 animations.Play("Armature|Idle");
+
+                playerTransform.transform.rotation = Quaternion.Euler(0, 180, 0);
             }
         }
 
@@ -164,6 +173,7 @@ public class gridMovement : MonoBehaviour
                                | RigidbodyConstraints.FreezeRotationZ;
 
         rbPlayer.useGravity = true;
+
 
         animations.Play("Armature|Fall");
 
