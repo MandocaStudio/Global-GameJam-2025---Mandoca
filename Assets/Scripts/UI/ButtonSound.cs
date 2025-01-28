@@ -12,7 +12,7 @@ public class MenuButtonSoundManager : MonoBehaviour
     public AudioMixerGroup soundEffectsGroup;  // Grupo del Audio Mixer para estos sonidos.
 
     public List<Button> buttonsToConfigure;    // Lista de botones que tendrán los sonidos asignados.
-
+    
     private AudioSource audioSource;
 
     void Start()
