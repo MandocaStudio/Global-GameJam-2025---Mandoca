@@ -370,6 +370,7 @@ Animation:
   - {fileID: 4699274299699868179, guid: 21c731fb60bad2d44809accadfdbce75, type: 3}
   - {fileID: -301085385668059047, guid: 21c731fb60bad2d44809accadfdbce75, type: 3}
   - {fileID: -4892499684737959299, guid: 21c731fb60bad2d44809accadfdbce75, type: 3}
+  - {fileID: 7400000, guid: fdf6136cb9603ed4f83530e6d00dc0f6, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0

@@ -80,11 +80,13 @@ public class enemyMovement : MonoBehaviour
 
     private void Update()
     {
-        if (!animations.IsPlaying("Armature.001|MoveUp"))
-        {
-            animations.Play("Armature.001|Idle");
+        // if (!animations.IsPlaying("Armature.001|MoveDownLeftRight"))
+        // {
+        //     animations.Play("Armature.001|Idle");
 
-        }
+        // }
+
+
     }
 
 
@@ -118,7 +120,7 @@ public class enemyMovement : MonoBehaviour
         // Llama a la corrutina para mover al enemigo
         StartCoroutine(MoveToTarget(targetPosition));
 
-        animations.Play("Armature.001|MoveDownLeftRight");
+        //animations.Play("Armature.001|MoveDownLeftRight");
 
     }
 
@@ -155,6 +157,9 @@ public class enemyMovement : MonoBehaviour
         isMovingTowardsTarget = false;
 
         // Reproduce la animación de idle al completar el movimiento
+
+        //animations.Play("Armature.001|Idle");
+
 
         GameEvents.NotifyEnemyMove();
 
@@ -193,7 +198,7 @@ public class enemyMovement : MonoBehaviour
             if (bubbleHealth.cantidad_vida == 1)
             {
                 muelto = true;
-                bubbleHealth.destroyBubbleForEnemy(rbEnemy, sonidoMuerte);
+                bubbleHealth.destroyBubbleForEnemy(rbEnemy, sonidoMuerte, animations);
                 await UniTask.Delay(2000);
 
 
@@ -206,7 +211,7 @@ public class enemyMovement : MonoBehaviour
             else if (bubbleHealth.cantidad_vida == 0)
             {
                 muelto = true;
-                bubbleHealth.destroyBubbleForEnemy(rbEnemy, sonidoMuerte);
+                bubbleHealth.destroyBubbleForEnemy(rbEnemy, sonidoMuerte, animations);
 
                 await UniTask.Delay(2000);
 

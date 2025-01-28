@@ -117,39 +117,57 @@ public class Vida : MonoBehaviour
                 destroyBubbleForPlayer(playerScript);
 
             }
+
+
         }
 
-        // else if (other.gameObject.CompareTag("Enemigo"))
-        // {
-        //     if (cantidad_vida == 1)
-        //     {
-        //         enemyMovement enemyScript = other.collider.GetComponent<enemyMovement>();
+
+    }
+
+    private void OnCollisionStay(Collision other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("entra a");
+
+            gridMovement playerScript = other.collider.GetComponent<gridMovement>();
+
+            if (playerScript.muelto == true)
+            {
+
+                Debug.Log("entra");
+                //Player.speed = 0;
+                bubbleMeshRenderer.enabled = false;
+
+                bubbleVFX.SetActive(true);
 
 
-        //     }
-        // }
+                sonidosBurbuja.PlayOneShot(rojoRojito);
+
+            }
+        }
     }
 
 
 
-    public async void destroyBubbleForEnemy(Rigidbody rbEnemy, AudioClip sonido)
+    public async void destroyBubbleForEnemy(Rigidbody rbEnemy, AudioClip sonido, Animation enemyAnim)
     {
         enemyMovement enemy = rbEnemy.GetComponent<enemyMovement>();
 
         enemy.muelto = true;
+
         await UniTask.Delay(500);
         bubbleVFX.SetActive(true);
         bubbleMeshRenderer.enabled = false;
 
-        Animation animations = rbEnemy.GetComponent<Animation>();
+        enemyAnim.Play("FallZancudo");
+        // aqui
 
-        animations.Play("Armature.001|MoveDownLeftRight"); // aqui
-
-        rbEnemy.constraints = RigidbodyConstraints.FreezePositionX
-                       | RigidbodyConstraints.FreezePositionZ
-                       | RigidbodyConstraints.FreezeRotationX
-                       | RigidbodyConstraints.FreezeRotationY
-                       | RigidbodyConstraints.FreezeRotationZ;
+        // rbEnemy.constraints = RigidbodyConstraints.FreezePositionX
+        //                | RigidbodyConstraints.FreezePositionZ
+        //                | RigidbodyConstraints.FreezeRotationX
+        //                | RigidbodyConstraints.FreezeRotationY
+        //                | RigidbodyConstraints.FreezeRotationZ;
 
         rbEnemy.useGravity = true;
 
@@ -181,16 +199,13 @@ public class Vida : MonoBehaviour
 
         sonidosBurbuja.PlayOneShot(rojoRojito);
 
-
-
         bubbleMeshRenderer.enabled = false;
-
 
         Player.allowFall();
 
         sonidos.PlayOneShot(playerFall);
 
-        Destroy(gameObject);
+        //Destroy(gameObject);
 
         await UniTask.Delay(1000);
 

@@ -20,7 +20,7 @@ public class gridMovement : MonoBehaviour
 
     [SerializeField] private Vector3 input;
 
-    [SerializeField] private bool canMove, canUseMovement;
+    public bool canMove, canUseMovement;
 
 
     [SerializeField] private Vector3 cubeRadius;
@@ -45,6 +45,7 @@ public class gridMovement : MonoBehaviour
     void Start()
     {
         rbPlayer = GetComponent<Rigidbody>();
+
         playerTransform = GetComponent<Transform>();
         movePoint = transform.position;
 
@@ -71,11 +72,15 @@ public class gridMovement : MonoBehaviour
     private void enemiesDeathFunction()
     {
         enemiesDeath += 1;
+
+
     }
 
 
     void Update()
     {
+
+
 
 
         input.z = (int)Input.GetAxisRaw("DPadVertical");
@@ -113,15 +118,7 @@ public class gridMovement : MonoBehaviour
 
 
 
-        if (!animations.IsPlaying("Armature|StepDown") && !muelto) // Reemplaza "OtherAnimation" con el nombre de la animación anterior
-        {
-            if (input.x == 0 && input.z == 0)
-            {
-                animations.Play("Armature|Idle");
 
-                playerTransform.transform.rotation = Quaternion.Euler(0, 180, 0);
-            }
-        }
 
         if ((input.x != 0 ^ input.z != 0) && !canMove && canUseMovement && !muelto && (!enemyMoving || enemiesDeath == maxEnemiesPerLvl))
         {
@@ -156,9 +153,14 @@ public class gridMovement : MonoBehaviour
         {
             enemyMoving = true;
 
-
-
             await UniTask.Delay(700);
+
+            if (!muelto)
+            {
+                animations.Play("Armature|Idle");
+
+            }
+
 
             GameEvents.NotifyPlayerMove();
         }
@@ -166,16 +168,19 @@ public class gridMovement : MonoBehaviour
 
     public void allowFall()
     {
-        rbPlayer.constraints = RigidbodyConstraints.FreezePositionX
-                               | RigidbodyConstraints.FreezePositionZ
-                               | RigidbodyConstraints.FreezeRotationX
-                               | RigidbodyConstraints.FreezeRotationY
-                               | RigidbodyConstraints.FreezeRotationZ;
+        // rbPlayer.constraints = RigidbodyConstraints.FreezePositionX
+        //                        | RigidbodyConstraints.FreezePositionZ
+        //                        | RigidbodyConstraints.FreezeRotationX
+        //                        | RigidbodyConstraints.FreezeRotationY
+        //                        | RigidbodyConstraints.FreezeRotationZ;
 
-        rbPlayer.useGravity = true;
+        // rbPlayer.useGravity = true;
 
 
         animations.Play("Armature|Fall");
+
+
+
 
     }
 
@@ -189,30 +194,30 @@ public class gridMovement : MonoBehaviour
 
             if (input.x == 1)
             {
-                playerTransform.transform.rotation = Quaternion.Euler(0, 90, 0);
+                //playerTransform.transform.rotation = Quaternion.Euler(0, 90, 0);
 
-                animations.Play("Armature|StepDown");
+                animations.Play("Armature|StepRight");
                 return;
             }
             else if (input.x == -1)
             {
-                playerTransform.transform.rotation = Quaternion.Euler(0, 270, 0);
-                animations.Play("Armature|StepDown");
+                //playerTransform.transform.rotation = Quaternion.Euler(0, 270, 0);
+                animations.Play("Armature|StepLeft");
                 return;
 
             }
 
             else if (input.z == -1)
             {
-                playerTransform.transform.rotation = Quaternion.Euler(0, 180, 0);
+                //playerTransform.transform.rotation = Quaternion.Euler(0, 180, 0);
                 animations.Play("Armature|StepDown");
                 return;
 
             }
             else if (input.z == 1)
             {
-                playerTransform.transform.rotation = Quaternion.Euler(0, 360, 0);
-                animations.Play("Armature|StepDown");
+                //playerTransform.transform.rotation = Quaternion.Euler(0, 360, 0);
+                animations.Play("Armature|StepUp");
                 return;
 
             }
@@ -226,5 +231,14 @@ public class gridMovement : MonoBehaviour
         Gizmos.DrawWireCube(movePoint + targetPosition, cubeRadius);
     }
 
+    private void OnCollisionStay(Collision other)
+    {
+        if (other.gameObject.CompareTag("bubble"))
+        {
+            Debug.Log("entra b");
+
+
+        }
+    }
 
 }
