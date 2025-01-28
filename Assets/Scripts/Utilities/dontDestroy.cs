@@ -3,36 +3,50 @@ using UnityEngine.SceneManagement;
 
 public class PersistentAudio : MonoBehaviour
 {
-    private static PersistentAudio instance;
+    public static PersistentAudio instance;
+
+    [SerializeField] private int destroyAtSceneIndex; // Índice de la escena donde se debe destruir el objeto
+
+    [SerializeField] private bool canPersist;
 
     private void Awake()
     {
-        // Verificar si la escena actual es la de índice 0
-
-
-        // Si ya existe una instancia, destruye este objeto
-        if (instance != null && instance != this)
+        // Si ya existe una instancia y no es esta
+        if (instance != null && instance != this && (Input.GetButtonDown("restart") || SceneManager.GetActiveScene().buildIndex != destroyAtSceneIndex))
         {
-            // Comprobar si los nombres son diferentes
-            if (gameObject.name == instance.gameObject.name)
-            {
-                // Si el nombre es diferente, mantenemos el objeto actual y destruimos el otro
-                Destroy(gameObject);
-                return;
-            }
+            Destroy(gameObject); // Destruir el objeto si es otro
+            return;
         }
 
-        // Marca esta instancia como única y no destruir al cargar nueva escena
+        canPersist = false;
+
+        // Marca esta instancia como la única
         instance = this;
+
+        // Mantener este objeto persistente entre escenas
         DontDestroyOnLoad(gameObject);
     }
 
     private void Update()
     {
-        if (SceneManager.GetActiveScene().buildIndex == 0 || SceneManager.GetActiveScene().buildIndex == 1)
+
+        // Si estamos en la escena donde el objeto debe destruirse y el flag está activado, destrúyelo
+        if (SceneManager.GetActiveScene().buildIndex == destroyAtSceneIndex || SceneManager.GetActiveScene().buildIndex == 1 || SceneManager.GetActiveScene().buildIndex == 0)
         {
             Destroy(gameObject);
-            return;
+            instance = null; // Limpia la referencia para permitir que un nuevo objeto tome el control
         }
     }
+
+    public void DestroyAudioObject()
+    {
+        if (SceneManager.GetActiveScene().buildIndex + 1 == destroyAtSceneIndex)
+        {
+            Destroy(gameObject);
+
+            instance = null;
+        }
+        // Limpia la referencia de la instancia
+    }
 }
+

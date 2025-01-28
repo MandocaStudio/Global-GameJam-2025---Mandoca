@@ -14,7 +14,11 @@ public class premio : MonoBehaviour
 
             recolector.comprobacion(valorMoneda);
 
+
+
             Destroy(gameObject);
+
+
 
         }
 

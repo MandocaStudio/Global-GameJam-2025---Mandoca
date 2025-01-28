@@ -122,6 +122,9 @@ public class enemyMovement : MonoBehaviour
 
     private IEnumerator MoveToTarget(Vector3 target)
     {
+
+        animations.Play("Armature.001|MoveDownLeftRight");
+
         // Mueve el objeto hacia la posición objetivo
         while (Vector3.Distance(transform.position, target) > 0.01f)
         {
@@ -139,7 +142,6 @@ public class enemyMovement : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
 
             // Reproduce la animación
-            animations.Play("Armature.001|MoveDownLeftRight");
 
             yield return null; // Espera al siguiente frame
         }
@@ -151,8 +153,6 @@ public class enemyMovement : MonoBehaviour
         isMovingTowardsTarget = false;
 
         // Reproduce la animación de idle al completar el movimiento
-        animations.Play("Armature.001|Idle");
-
 
         GameEvents.NotifyEnemyMove();
 

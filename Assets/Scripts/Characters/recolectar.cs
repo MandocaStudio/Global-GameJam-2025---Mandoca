@@ -21,6 +21,11 @@ public class recolectar : MonoBehaviour
 
             int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
 
+            if (PersistentAudio.instance != null)
+            {
+                PersistentAudio.instance.DestroyAudioObject();
+            }
+
             // Carga la siguiente escena sumando 1 al índice actual
             SceneManager.LoadScene(currentSceneIndex + 1);
         }
