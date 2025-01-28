@@ -147,10 +147,12 @@ public class gridMovement : MonoBehaviour
         {
             enemyMoving = true;
 
-        }
 
-        await UniTask.Delay(700);
-        GameEvents.NotifyPlayerMove();
+
+            await UniTask.Delay(700);
+
+            GameEvents.NotifyPlayerMove();
+        }
     }
 
     public void allowFall()

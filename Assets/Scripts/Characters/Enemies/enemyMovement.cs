@@ -117,13 +117,15 @@ public class enemyMovement : MonoBehaviour
 
         // Llama a la corrutina para mover al enemigo
         StartCoroutine(MoveToTarget(targetPosition));
+
+        animations.Play("Armature.001|MoveDownLeftRight");
+
     }
 
 
     private IEnumerator MoveToTarget(Vector3 target)
     {
 
-        animations.Play("Armature.001|MoveDownLeftRight");
 
         // Mueve el objeto hacia la posición objetivo
         while (Vector3.Distance(transform.position, target) > 0.01f)

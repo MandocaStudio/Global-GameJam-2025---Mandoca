@@ -5,6 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class fall : MonoBehaviour
 {
+
+    [SerializeField] AudioClip sonidoCaida;
+
+    [SerializeField] AudioSource soundEffect;
     private async void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.CompareTag("Player"))
@@ -18,7 +22,7 @@ public class fall : MonoBehaviour
 
             player.allowFall();
 
-
+            soundEffect.PlayOneShot(sonidoCaida);
 
             await UniTask.Delay(1000);
 
