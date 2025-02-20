@@ -1,10 +1,6 @@
-using System.Runtime.CompilerServices;
-using System.Threading.Tasks;
 using Cysharp.Threading.Tasks;
-using Unity.Mathematics;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-
+using UnityEngine.InputSystem;
 
 public class gridMovement : MonoBehaviour
 {
@@ -26,35 +22,43 @@ public class gridMovement : MonoBehaviour
     [SerializeField] private Vector3 cubeRadius;
 
 
-    [SerializeField] private Transform playerTransform;
 
     [SerializeField] private Rigidbody rbPlayer;
-
     [SerializeField] private int sceneIndex;
 
-    public Animation animations;
-
+    //public Animation animations;
     [SerializeField] private bool enemyMoving;
     private Vector3 previousInput; // Para almacenar la entrada previa del jugador
 
-
     [SerializeField] float enemiesDeath, maxEnemiesPerLvl;
+    [SerializeField] Animator playerAnimator;
 
+    [Header("Sounds")]
+    public AudioSource soundEffect;
 
+    public AudioClip fallingAudio, laughtingAudio;
+
+    [Header("Tile Detectors")]
+
+    [SerializeField] private TilePosition upTile;
+    [SerializeField] private TilePosition downTile;
+    [SerializeField] private TilePosition leftTile;
+    [SerializeField] private TilePosition rightTile;
+    [SerializeField] private TilePosition currentTile;
+
+    [SerializeField] Vector3 tileMovePoint;
+
+    [SerializeField] PlayerInput playerInput;
 
     void Start()
     {
         rbPlayer = GetComponent<Rigidbody>();
 
-        playerTransform = GetComponent<Transform>();
-        movePoint = transform.position;
+        playerAnimator = GetComponentInChildren<Animator>();
 
-        animations["Armature|Idle"].wrapMode = WrapMode.Loop;
+        tileMovePoint = transform.position;
 
-
-        animations.Play("Armature|Idle");
-
-
+        playerInput = GetComponent<PlayerInput>();
     }
 
     private void OnEnable()
@@ -67,178 +71,139 @@ public class gridMovement : MonoBehaviour
     private void PlayerCanMove()
     {
         enemyMoving = false;
+        canUseMovement = true;
     }
 
     private void enemiesDeathFunction()
     {
-        enemiesDeath += 1;
+        if (enemiesDeath != maxEnemiesPerLvl)
+        {
+            enemiesDeath += 1;
 
+        }
 
     }
-
 
     void Update()
     {
+        //leer entradas
+        input.x = playerInput.actions["movement"].ReadValue<Vector2>().x;
+        input.z = playerInput.actions["movement"].ReadValue<Vector2>().y;
 
-
-
-
-        input.z = (int)Input.GetAxisRaw("DPadVertical");
-        input.x = (int)Input.GetAxisRaw("DPadHorizontal");
-
-        if (Input.anyKey)
+        //mover y resetear inputs
+        if (canUseMovement && !muelto && !Input.GetButton("proyectil") && (input.x != 0 ^ input.z != 0) && !enemyMoving)
         {
-            input.z = (int)Input.GetAxisRaw("DPadVerticalPC");
-            input.x = (int)Input.GetAxisRaw("DPadHorizontalPC");
-        }
-
-
-
-        if (canMove && !muelto && !Input.GetButton("proyectil"))
-        {
-
-            transform.position = Vector3.MoveTowards(transform.position, movePoint, speed * Time.deltaTime);
-
-            // Notifica a los enemigos que el jugador se movió
-
-            if (Vector3.Distance(transform.position, movePoint) == 0)
-            {
-                canMove = false;
-
-                canUseMovement = false;
-            }
-
-
             moving();
 
-
+            input.z = 0;
+            input.x = 0;
         }
 
-
-
-
-
-
-
-        if ((input.x != 0 ^ input.z != 0) && !canMove && canUseMovement && !muelto && (!enemyMoving || enemiesDeath == maxEnemiesPerLvl))
+        if (Vector3.Distance(transform.position, tileMovePoint) > 0.1f)
         {
-            rotatePlayer();
-            canMove = true;
+            transform.position = Vector3.MoveTowards(transform.position, tileMovePoint, speed * Time.deltaTime);
 
-            movePoint += input;
+            canUseMovement = false;
 
-            previousInput = input;
+            input.z = 0;
+            input.x = 0;
         }
 
-
-        if (Input.GetButton("proyectil"))
+        if (Vector3.Distance(transform.position, tileMovePoint) < 0.1f && !canUseMovement)
         {
-            movePoint = transform.position;
-            rotatePlayer();
-
+            enemyCanMove();
         }
 
-
-        if (input == Vector3.zero)
-        {
-            canUseMovement = true;
-            previousInput = Vector3.zero;
-        }
     }
 
-    private async void moving()
+    private void moving()
     {
 
-        if (enemiesDeath != maxEnemiesPerLvl)
+        if (input.z == 1 && upTile != null)
+        {
+            tileMovePoint = new Vector3(transform.position.x, transform.position.y, upTile.transform.position.z);
+        }
+        else if (input.z == -1 && downTile != null)
+        {
+            tileMovePoint = new Vector3(transform.position.x, transform.position.y, downTile.transform.position.z);
+        }
+        else if (input.x == 1 && rightTile != null)
+        {
+            tileMovePoint = new Vector3(rightTile.transform.position.x, transform.position.y, transform.position.z);
+
+        }
+        else if (input.x == -1 && leftTile != null)
+        {
+            tileMovePoint = new Vector3(leftTile.transform.position.x, transform.position.y, transform.position.z);
+        }
+        else
+        {
+            input.z = 0;
+            input.x = 0;
+            return; // No se mueve si no hay un tile válido
+        }
+
+        playerAnimator.SetFloat("X", input.x);
+        playerAnimator.SetFloat("Z", input.z);
+
+    }
+
+    private async void enemyCanMove()
+    {
+
+        if (enemiesDeath != maxEnemiesPerLvl && !enemyMoving)
         {
             enemyMoving = true;
-
-            await UniTask.Delay(700);
-
-            if (!muelto)
-            {
-                animations.Play("Armature|Idle");
-
-            }
-
+            playerAnimator.SetTrigger("idle");
 
             GameEvents.NotifyPlayerMove();
+
+
+
+        }
+        else if (enemiesDeath >= maxEnemiesPerLvl)
+        {
+            await UniTask.Delay(700);
         }
     }
 
     public void allowFall()
     {
-        // rbPlayer.constraints = RigidbodyConstraints.FreezePositionX
-        //                        | RigidbodyConstraints.FreezePositionZ
-        //                        | RigidbodyConstraints.FreezeRotationX
-        //                        | RigidbodyConstraints.FreezeRotationY
-        //                        | RigidbodyConstraints.FreezeRotationZ;
 
-        // rbPlayer.useGravity = true;
-
-
-        animations.Play("Armature|Fall");
-
-
-
+        //animations.Play("Armature|Fall");
 
     }
 
 
-    private void rotatePlayer()
+    public void setTileUp(TilePosition tile)
     {
-
-
-        if (speed != 0)
-        {
-
-            if (input.x == 1)
-            {
-                //playerTransform.transform.rotation = Quaternion.Euler(0, 90, 0);
-
-                animations.Play("Armature|StepRight");
-                return;
-            }
-            else if (input.x == -1)
-            {
-                //playerTransform.transform.rotation = Quaternion.Euler(0, 270, 0);
-                animations.Play("Armature|StepLeft");
-                return;
-
-            }
-
-            else if (input.z == -1)
-            {
-                //playerTransform.transform.rotation = Quaternion.Euler(0, 180, 0);
-                animations.Play("Armature|StepDown");
-                return;
-
-            }
-            else if (input.z == 1)
-            {
-                //playerTransform.transform.rotation = Quaternion.Euler(0, 360, 0);
-                animations.Play("Armature|StepUp");
-                return;
-
-            }
-        }
-
+        upTile = tile;
     }
 
-    private void OnDrawGizmos()
+    public void setTileDown(TilePosition tile)
     {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireCube(movePoint + targetPosition, cubeRadius);
+        downTile = tile;
+
     }
 
-    private void OnCollisionStay(Collision other)
+    public void setTileLeft(TilePosition tile)
     {
-        if (other.gameObject.CompareTag("bubble"))
-        {
-            Debug.Log("entra b");
+        leftTile = tile;
 
-
-        }
     }
 
+    public void setTileRight(TilePosition tile)
+    {
+        rightTile = tile;
+
+    }
+
+    public void setTileCurrent(TilePosition tile)
+    {
+        currentTile = tile;
+
+    }
 }
+
+
+

@@ -3,7 +3,7 @@ using UnityEngine;
 public class risita : MonoBehaviour
 {
     [SerializeField] private float countdownTime = 5f; // Tiempo en segundos
-    [SerializeField] private float elapsedTime = 0f; // Tiempo transcurrido
+    public float elapsedTime = 0f; // Tiempo transcurrido
 
     [SerializeField] private gridMovement player;
 

@@ -13,7 +13,7 @@ public class Vida : MonoBehaviour
 
     [SerializeField] private MeshRenderer bubbleMeshRenderer;
 
-    [SerializeField] AudioClip amarillo, rojo, rojoRojito, playerFall;
+    [SerializeField] AudioClip amarillo, rojo, rojoRojito;
 
     [SerializeField] AudioSource sonidos;
 
@@ -21,12 +21,6 @@ public class Vida : MonoBehaviour
 
 
     [SerializeField] BoxCollider Collider;
-
-
-
-
-
-
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -52,34 +46,15 @@ public class Vida : MonoBehaviour
 
         bubbleVFX.SetActive(false);
 
-        Collider = GetComponent<BoxCollider>();
-
-
-
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-    private void OnCollisionExit(Collision other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            bubbleDamage(true);
-
-        }
-
-    }
-
-    public void bubbleDamage(bool soundEffect)
+    public async void bubbleDamage(bool soundEffectActiveForPlayer)
     {
         cantidad_vida -= 1;
         if (cantidad_vida == 2)
         {
             objectRenderer.material = color2;
-            if (soundEffect)
+            if (soundEffectActiveForPlayer)
             {
                 sonidosBurbuja.PlayOneShot(amarillo);
 
@@ -89,129 +64,28 @@ public class Vida : MonoBehaviour
         {
             objectRenderer.material = color3;
 
-            if (soundEffect)
+            if (soundEffectActiveForPlayer)
             {
                 sonidosBurbuja.PlayOneShot(rojo);
-
-
-            }
-
-
-        }
-    }
-
-    private void OnCollisionEnter(Collision other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            if (cantidad_vida == 1)
-            {
-
-                gridMovement playerScript = other.collider.GetComponent<gridMovement>();
-                destroyBubbleForPlayer(playerScript);
-            }
-
-            if (cantidad_vida == 0)
-            {
-                gridMovement playerScript = other.collider.GetComponent<gridMovement>();
-                destroyBubbleForPlayer(playerScript);
-
-            }
-
-
-        }
-
-
-    }
-
-    private void OnCollisionStay(Collision other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            Debug.Log("entra a");
-
-            gridMovement playerScript = other.collider.GetComponent<gridMovement>();
-
-            if (playerScript.muelto == true)
-            {
-
-                Debug.Log("entra");
-                //Player.speed = 0;
-                bubbleMeshRenderer.enabled = false;
-
-                bubbleVFX.SetActive(true);
-
-
-                sonidosBurbuja.PlayOneShot(rojoRojito);
-
             }
         }
-    }
 
-
-
-    public async void destroyBubbleForEnemy(Rigidbody rbEnemy, AudioClip sonido, Animation enemyAnim)
-    {
-        enemyMovement enemy = rbEnemy.GetComponent<enemyMovement>();
-
-        enemy.muelto = true;
-
-        await UniTask.Delay(500);
-        bubbleVFX.SetActive(true);
-        bubbleMeshRenderer.enabled = false;
-
-        enemyAnim.Play("FallZancudo");
-        // aqui
-
-        // rbEnemy.constraints = RigidbodyConstraints.FreezePositionX
-        //                | RigidbodyConstraints.FreezePositionZ
-        //                | RigidbodyConstraints.FreezeRotationX
-        //                | RigidbodyConstraints.FreezeRotationY
-        //                | RigidbodyConstraints.FreezeRotationZ;
-
-        rbEnemy.useGravity = true;
-
-        AudioSource soundEffects = GameObject.Find("efectos").GetComponent<AudioSource>();
-
-        soundEffects.PlayOneShot(sonido);
-
-        objectRenderer.enabled = false;
-
-        // Collider.isTrigger = true;
-
-
-
-    }
-
-    private async void destroyBubbleForPlayer(gridMovement Player)
-    {
-
-        await UniTask.Delay(500);
-
-        Player.muelto = true;
-
-        //Player.speed = 0;
         if (cantidad_vida == 0)
         {
+            bubbleMeshRenderer.enabled = false;
             bubbleVFX.SetActive(true);
 
+            if (soundEffectActiveForPlayer)
+            {
+                sonidosBurbuja.PlayOneShot(rojoRojito);
+            }
+
+            await UniTask.Delay(2000);
+
+            Destroy(gameObject);
+
         }
-
-        sonidosBurbuja.PlayOneShot(rojoRojito);
-
-        bubbleMeshRenderer.enabled = false;
-
-        Player.allowFall();
-
-        sonidos.PlayOneShot(playerFall);
-
-        //Destroy(gameObject);
-
-        await UniTask.Delay(1000);
-
-
-        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(currentSceneIndex);
-
     }
+
+
 }

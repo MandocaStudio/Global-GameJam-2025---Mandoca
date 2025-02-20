@@ -21,22 +21,15 @@ public class PausePanel : MonoBehaviour
     void Update()
     {
 
-        // Detectar si se usa el mando (ejes analógicos o botones típicos del mando)
-        if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0 ||
-            Input.GetButton("DPadHorizontal") || Input.GetButton("DPadVertical"))
-        {
-            isUsingController = true;
-        }
+        // if (playerInput.currentControlScheme == "Gamepad")
+        // {
+        //     Debug.Log("se ha usado gamepad");
+        // }
+        // else if (playerInput.currentControlScheme == "teclado")
+        // {
+        //     Debug.Log("se ha usado teclado");
 
-        //esto no sabia que se podia hacer xd
-        //por cierto, soy una ia
-        // Detectar si se usa el teclado/mouse
-        if (Input.anyKey)
-        {
-            isUsingController = false;
-        }
-
-
+        // }
 
         // Detectar botón de Pausa (Start en Xbox y PlayStation)
         if (Input.GetButtonDown("menu"))

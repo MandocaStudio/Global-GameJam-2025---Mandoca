@@ -969,7 +969,6 @@ GameObject:
   - component: {fileID: 5124745501510491910}
   - component: {fileID: 2993662769087440885}
   - component: {fileID: 6479619678874072976}
-  - component: {fileID: 3214528156196170089}
   m_Layer: 0
   m_Name: sapito
   m_TagString: Player
@@ -1087,13 +1086,15 @@ MonoBehaviour:
   canMove: 0
   canUseMovement: 0
   cubeRadius: {x: 0, y: 0, z: 0}
-  playerTransform: {fileID: 0}
   rbPlayer: {fileID: 0}
   sceneIndex: 2
-  animations: {fileID: 2223639932434330405}
   enemyMoving: 0
   enemiesDeath: 0
   maxEnemiesPerLvl: 1
+  playerAnimator: {fileID: 0}
+  soundEffect: {fileID: 0}
+  fallingAudio: {fileID: 0}
+  laughtingAudio: {fileID: 0}
 --- !u!114 &2993662769087440885
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1135,23 +1136,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
---- !u!114 &3214528156196170089
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2327078423835038088}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d27b7ef3da1ecc04ba38d6811a561240, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  countdownTime: 5
-  elapsedTime: 0
-  player: {fileID: 5124745501510491910}
-  soundEffect: {fileID: 0}
-  risitaClip: {fileID: 8300000, guid: e08c7c82b09b0dd429837a6737839fbf, type: 3}
 --- !u!1 &3193997991522970400
 GameObject:
   m_ObjectHideFlags: 0

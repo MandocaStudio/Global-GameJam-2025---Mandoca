@@ -30,7 +30,6 @@ public class enemyMovement : MonoBehaviour
 
     [SerializeField] private Animation animations;
 
-    [SerializeField] bool isMoving;
 
 
     [SerializeField] Vector3 center;
@@ -65,7 +64,6 @@ public class enemyMovement : MonoBehaviour
         {
 
             GameEvents.OnPlayerMove += MoveTowardsPlayer;
-            isMoving = true;
         }
 
     }
@@ -165,9 +163,6 @@ public class enemyMovement : MonoBehaviour
 
     }
 
-
-
-
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("bubble"))
@@ -176,73 +171,69 @@ public class enemyMovement : MonoBehaviour
             bubbleHealth = other.GetComponent<Vida>();
             bubbleHealth.bubbleDamage(false);
 
-
-
-
-
         }
     }
 
-    private async void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("bubble"))
-        {
+    // private async void OnTriggerEnter(Collider other)
+    // {
+    //     if (other.CompareTag("bubble"))
+    //     {
 
 
-            Vector3 center = other.GetComponent<Collider>().bounds.center;
+    //         Vector3 center = other.GetComponent<Collider>().bounds.center;
 
-            transform.position = Vector3.MoveTowards(transform.position, center, speed * Time.deltaTime);
+    //         transform.position = Vector3.MoveTowards(transform.position, center, speed * Time.deltaTime);
 
-            bubbleHealth = other.GetComponent<Vida>();
+    //         bubbleHealth = other.GetComponent<Vida>();
 
-            if (bubbleHealth.cantidad_vida == 1)
-            {
-                muelto = true;
-                bubbleHealth.destroyBubbleForEnemy(rbEnemy, sonidoMuerte, animations);
-                await UniTask.Delay(2000);
-
-
-
-                GameEvents.NotifyEnemyDeath();
-
-
-                Destroy(gameObject);
-            }
-            else if (bubbleHealth.cantidad_vida == 0)
-            {
-                muelto = true;
-                bubbleHealth.destroyBubbleForEnemy(rbEnemy, sonidoMuerte, animations);
-
-                await UniTask.Delay(2000);
-
-                GameEvents.NotifyEnemyDeath();
-
-                Destroy(gameObject);
-
-
-            }
+    //         if (bubbleHealth.cantidad_vida == 1)
+    //         {
+    //             muelto = true;
+    //             bubbleHealth.destroyBubbleForEnemy(rbEnemy, sonidoMuerte, animations);
+    //             await UniTask.Delay(2000);
 
 
 
-        }
+    //             GameEvents.NotifyEnemyDeath();
 
-        if (other.CompareTag("Player"))
-        {
-            //animacion y sonido de muerte
-            playerScript.muelto = true;
-            playerScript.allowFall();
 
-            sonido.PlayOneShot(daño);
-            Destroy(gameObject);
+    //             Destroy(gameObject);
+    //         }
+    //         else if (bubbleHealth.cantidad_vida == 0)
+    //         {
+    //             muelto = true;
+    //             bubbleHealth.destroyBubbleForEnemy(rbEnemy, sonidoMuerte, animations);
 
-            await UniTask.Delay(1000);
+    //             await UniTask.Delay(2000);
 
-            int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-            SceneManager.LoadScene(currentSceneIndex);
+    //             GameEvents.NotifyEnemyDeath();
 
-        }
+    //             Destroy(gameObject);
 
-    }
+
+    //         }
+
+
+
+    //     }
+
+    //     if (other.CompareTag("Player"))
+    //     {
+    //         //animacion y sonido de muerte
+    //         playerScript.muelto = true;
+    //         playerScript.allowFall();
+
+    //         sonido.PlayOneShot(daño);
+    //         Destroy(gameObject);
+
+    //         await UniTask.Delay(1000);
+
+    //         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+    //         SceneManager.LoadScene(currentSceneIndex);
+
+    //     }
+
+    // }
 
 
 

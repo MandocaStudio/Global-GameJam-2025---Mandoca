@@ -10,10 +10,10 @@ public static class GameEvents
     public static event Action OnEnemyDeath;
 
 
-
     public static void NotifyPlayerMove()
     {
         OnPlayerMove?.Invoke();
+
 
     }
 
@@ -26,5 +26,7 @@ public static class GameEvents
     {
         OnEnemyDeath?.Invoke();
     }
+
+
 }
 

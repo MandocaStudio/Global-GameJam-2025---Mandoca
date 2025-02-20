@@ -7,7 +7,6 @@ public class PersistentAudio : MonoBehaviour
 
     [SerializeField] private int destroyAtSceneIndex; // Índice de la escena donde se debe destruir el objeto
 
-    [SerializeField] private bool canPersist;
 
     private void Awake()
     {
@@ -18,7 +17,6 @@ public class PersistentAudio : MonoBehaviour
             return;
         }
 
-        canPersist = false;
 
         // Marca esta instancia como la única
         instance = this;
